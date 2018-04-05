@@ -10,7 +10,7 @@ import {
 
 const App = () => (
   <div>
-    <p>Testing</p>
+    <h1>Welcome to StarWarsBnb</h1>
   </div>
 );
 
