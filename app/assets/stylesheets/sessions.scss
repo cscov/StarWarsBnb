@@ -4,7 +4,89 @@
 
 $airBnbPink: #FF5A5F;
 $airBnbTeal: #008489;
+$airBnbGray: #484848;
+$airBnbLightGray: rgb(120, 120, 120);
+$airBnbPurple: rgb(87, 37, 51);
+$airBnbBorderColor: #DBDBDB;
 
 .theme-pink {
   color: $airBnbPink;
+}
+
+.theme-gray {
+  color: $airBnbGray;
+}
+
+.theme-light-gray {
+  color: $airBnbLightGray;
+}
+
+.theme-teal {
+  color: $airBnbTeal;
+}
+
+.theme-purple {
+  color: $airBnbPurple;
+}
+
+nav {
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #DBDBDB;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+
+#logo {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: inline;
+}
+
+nav input {
+  padding-left: 10px;
+  padding-top: 7px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.search {
+  border: 1px solid $airBnbBorderColor;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 42px;
+  width: 75%;
+  display: inline-block;
+}
+
+.search span {
+  padding-left: 15px;
+  padding-top: 20px;
+}
+
+.left-nav {
+  width: 500px;
+}
+
+.right-nav {
+  margin-right: 5%;
+  height: 100%;
+}
+
+.right-nav a, button {
+  margin-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+.session-links {
+  font-size: 14px;
+  color: $airBnbLightGray;
+  display: flex;
+  border-bottom: 2px solid transparent;
+  align-items: center;
+  height: 100%;
 }

@@ -9,10 +9,10 @@ const greet = (currentUser, logout) => (
 );
 
 const sessionLinks = (demoLogin) => (
-  <div>
-    <Link to='/signup'>Sign Up</Link>
-    <Link to='/login'>Log In</Link>
-    <button onClick={demoLogin}>Demo Login</button>
+  <div className="session-links">
+    <div><Link to='/signup'>Sign Up</Link></div>
+    <div><Link to='/login'>Log In</Link></div>
+    <button  id="demo" onClick={demoLogin}>Demo Login</button>
   </div>
 );
 
