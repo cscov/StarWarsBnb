@@ -14,25 +14,28 @@ fontawesome.library.add(brands, regular, solid, faRebel);
 
 const App = () => (
   <div className="app">
-    <nav>
-      <div className="left-nav">
-        <span id="logo" className="theme-pink fa-2x">
-          <a href="/"><FontAwesomeIcon icon={["fab", "rebel"]} /></a>
-        </span>
-        <div className="search theme-light-gray">
-          <span className="fa-1.5x">
-            <FontAwesomeIcon icon={["fas", "search"]} />
+    <div className="lightbox">
+      <nav>
+        <div className="left-nav">
+          <span id="logo" className="theme-pink fa-2x">
+            <a href="/"><FontAwesomeIcon icon={["fab", "rebel"]} /></a>
           </span>
-          <input type="text" placeholder="Try 'Tatooine'" />
+          <div className="search theme-light-gray">
+            <span className="fa-1.5x">
+              <FontAwesomeIcon icon={["fas", "search"]} />
+            </span>
+            <input type="text" placeholder="Try 'Tatooine'" />
+          </div>
         </div>
-      </div>
-      <div className="right-nav">
-        <GreetingContainer />
-      </div>
-    </nav>
-
-    <AuthRoute path='/signup' component={SessionFormContainer} />
-    <AuthRoute path='/login' component={SessionFormContainer} />
+        <div className="right-nav">
+          <GreetingContainer />
+        </div>
+      </nav>
+        <div className="session-form">
+          <AuthRoute path='/signup' component={SessionFormContainer} />
+          <AuthRoute path='/login' component={SessionFormContainer} />
+        </div>
+    </div>
   </div>
 );
 

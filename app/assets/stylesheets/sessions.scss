@@ -90,3 +90,19 @@ nav input {
   align-items: center;
   height: 100%;
 }
+
+.lightbox {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  z-index: 2;
+}
+
+.session-form {
+  background-color: #fff;
+  z-index: 3;
+  height: auto;
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
