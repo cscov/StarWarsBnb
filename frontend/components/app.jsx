@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import GreetingContainer from './session/greeting_container';
 import SessionFormContainer from './session/session_form_container';
+import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
@@ -11,8 +12,8 @@ const App = () => (
       <GreetingContainer />
     </header>
 
-    <Route path='/signup' component={SessionFormContainer} />
-    <Route path='/login' component={SessionFormContainer} />
+    <AuthRoute path='/signup' component={SessionFormContainer} />
+    <AuthRoute path='/login' component={SessionFormContainer} />
   </div>
 );
 

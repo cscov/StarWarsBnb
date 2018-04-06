@@ -33,3 +33,8 @@ export const signup = user => dispatch => (
 export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
+
+export const demoLogin = user => dispatch => (
+  SessionAPIUtil.demoLogin(user).then( currentUser =>
+    dispatch(receiveCurrentUser(currentUser)))
+);
