@@ -7,17 +7,23 @@ import { AuthRoute } from '../util/route_util';
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
+import regular from '@fortawesome/fontawesome-free-regular';
+import solid from '@fortawesome/fontawesome-free-solid';
 import faRebel from '@fortawesome/fontawesome-free-brands/faRebel';
-fontawesome.library.add(brands, faRebel);
+fontawesome.library.add(brands, regular, solid, faRebel);
 
 const App = () => (
   <div>
-    <header>
-      <span className="theme-pink logo">
+    <nav>
+      <span className="theme-pink fa-2x">
         <FontAwesomeIcon icon={["fab", "rebel"]} />
       </span>
+      <div className="search">
+        <FontAwesomeIcon icon={["fas", "search"]} />
+        <input type="text" placeholder="Try 'Tatooine'" />
+      </div>
       <GreetingContainer />
-    </header>
+    </nav>
 
     <AuthRoute path='/signup' component={SessionFormContainer} />
     <AuthRoute path='/login' component={SessionFormContainer} />
