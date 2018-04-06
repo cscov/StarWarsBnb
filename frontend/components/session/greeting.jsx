@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const greet = (logout) => (
+const greet = (currentUser, logout) => (
   <div>
-    <span>Hello, currentUser</span>
+    <span>Hello, {currentUser.email_address}</span>
     <button onClick={logout}>Log Out</button>
   </div>
 );
@@ -16,7 +16,7 @@ const sessionLinks = () => (
 );
 
 const Greeting = ({currentUser, logout}) => {
-  return currentUser ? greet(logout) : sessionLinks();
+  return currentUser ? greet(currentUser, logout) : sessionLinks();
 };
 
 export default Greeting;
