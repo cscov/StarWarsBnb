@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
-const greet = (currentUser, logout) => (
+const newSession = (currentUser, logout) => (
   <div>
-    <span>Hello, {currentUser.email_address}</span>
     <button onClick={logout}>Log Out</button>
   </div>
 );
@@ -17,7 +16,8 @@ const sessionLinks = (demoLogin) => (
 );
 
 const Greeting = ({currentUser, logout, demoLogin}) => {
-  return currentUser ? greet(currentUser, logout) : sessionLinks(demoLogin);
+  return currentUser ? newSession(currentUser, logout)
+                      : sessionLinks(demoLogin);
 };
 
 export default Greeting;

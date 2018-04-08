@@ -25,6 +25,6 @@ export const demoLogin = () => (
   $.ajax({
     url: 'api/session',
     method: 'POST',
-    data: {user: {firstName: "Leia", emailAddress: "cscov", password: 123456}}
+    data: {user: {first_name: "Leia", email_address: "cscov", password: 123456}}
   })
 );

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Greeting from './greeting';
 import { logout, demoLogin } from '../../actions/session_actions';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser
 });
 
