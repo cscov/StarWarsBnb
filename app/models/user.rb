@@ -18,6 +18,10 @@ class User < ApplicationRecord
   validates :email_address, presence: true, uniqueness: true
   attr_reader :password
 
+  has_many :spots,
+  class_name: :Spot,
+  foreign_key: :host_id
+
   def reset_session_token!
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
