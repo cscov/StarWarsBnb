@@ -55,17 +55,23 @@
 
 class Spot < ApplicationRecord
   belongs_to :host,
-  class_name: :User,
-  foreign_key: :host_id
+             class_name: :User,
+             foreign_key: :host_id
 
   validates :host_id, :rental_type, :title, :planet, :num_guests,
-  :num_bedrooms, :num_baths, :num_beds, :daily_rate, :description,
-  :basic_amenity_category, :wifi, :indoor_fireplace, :tv, :iron, :essentials,
-  :heating, :air_conditioning, :hot_water, :facilities_amenity_category,
-  :parking, :hot_tub, :dining_amenity_category, :kitchen, :guest_access_amenity_category,
-  :lockbox, :bed_bath_amenity_category, :hangers, :hair_dryer, :shampoo,
-  :safety_amenity_category, :fire_extinguisher, :carbon_monoxide_detector,
-  :smoke_detector, :first_aid_kit, :not_included_amenity_category, :washer,
-  :private_entrance, :sleeping_arrangements, :house_rules, :cancellation_policy,
-  :getting_around, :address, :directions, :house_manual, presence: true
+            :num_bedrooms, :num_baths, :num_beds, :daily_rate, :description,
+            :basic_amenity_category,
+            :sleeping_arrangements, :house_rules, :cancellation_policy,
+            :getting_around, :address, :directions, :house_manual,
+            presence: true
+
+  validates_inclusion_of :wifi, :indoor_fireplace, :tv, :iron,
+  :essentials, :heating, :air_conditioning, :hot_water,
+  :facilities_amenity_category, :parking, :hot_tub,
+  :dining_amenity_category, :kitchen, :guest_access_amenity_category,
+  :lockbox, :bed_bath_amenity_category, :hangers, :hair_dryer,
+  :shampoo, :safety_amenity_category, :fire_extinguisher,
+  :carbon_monoxide_detector, :smoke_detector, :first_aid_kit,
+  :not_included_amenity_category, :washer, :private_entrance, in: [true, false]
+
 end

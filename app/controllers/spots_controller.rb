@@ -6,4 +6,5 @@ class SpotsController < ApplicationController
     @spots = Spot.all
     render :index
   end
+
 end
