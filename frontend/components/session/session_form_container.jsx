@@ -1,20 +1,23 @@
-import { connect } from 'react-redux';
 import React from 'react';
 import SessionForm from './session_form';
-import {login, signup, clearErrors } from '../../actions/session_actions';
 
-const mapStateToProps = (state, ownProps) => {
-  const errors = state.errors.sessionErrors;
-  const loggedIn = Boolean(state.session.currentUser);
-  return { errors, loggedIn };
-};
+class SessionFormContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { modalOpen: this.props.modalOpen};
+  }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  const formType = ownProps.location.pathname.slice(1);
-  const processForm = (formType === 'login') ? login : signup;
-  return { processForm: user => dispatch(signup(user)),
-           clearErrors: () => dispatch(clearErrors()),
-           formType };
-};
+  toggleModal() {
+    this.setState({modalOpen: !this.state });
+  }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
+  render() {
+    return (
+      <SessionForm modalOpen={this.state.modalOpen}
+      onClose={this.toggleModal} processForm={this.props.processForm}
+      clearErrors={this.props.clearErrors}/>
+    );
+  }
+}
+
+export default SessionFormContainer;

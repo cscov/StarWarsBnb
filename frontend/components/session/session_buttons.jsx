@@ -15,9 +15,9 @@ const sessionLinks = (demoLogin) => (
   </div>
 );
 
-const Greeting = ({currentUser, logout, demoLogin}) => {
+const SessionButtons = ({currentUser, logout, demoLogin}) => {
   return currentUser ? newSession(currentUser, logout)
                       : sessionLinks(demoLogin);
 };
 
-export default Greeting;
+export default SessionButtons;

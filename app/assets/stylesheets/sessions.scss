@@ -96,10 +96,11 @@ nav input {
 .lightbox {
   background-color: rgba(0, 0, 0, 0.8);
   height: 100vh;
-  z-index: 2;
-  position: absolute;
+  z-index: 0;
+  position: fixed;
   width: 100vw;
-  top: -20px;
+  bottom: 0;
+  right: 0;
 }
 
 .session-form {
@@ -109,7 +110,6 @@ nav input {
   width: 700px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
   padding-bottom: 2em;
   position: relative;
 }
@@ -118,14 +118,23 @@ h3 {
   font-family: 'Roboto', sans-serif;
   color: $airBnbLightGray;
   font-weight: 300;
-  padding-top: 1em;
+  padding-top: 2em;
+  padding-left: 4.5em;
 }
 
 .form-content {
   display: flex;
   flex-direction: column;
   width: 75%;
-  position: relative;
+  position: fixed;
+  background-color: #fff;
+  height: auto;
+  margin: 0 auto;
+  top: 100px;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  z-index: 5;
+  left: 5em;
 }
 
 form a {
@@ -158,6 +167,7 @@ input[type="password"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .form-submit {
@@ -184,15 +194,25 @@ input[type="password"] {
   font-weight: 300;
   cursor: pointer;
   position: absolute;
-  left: -1.5em;
+  left: 1em;
 }
 
 .error-messages {
-  margin-bottom: 1em;
   color: red;
+  padding-left: 5em;
 }
 
-.form {
+form {
   position: relative;
   top: auto;
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-button {
+  width: 100%;
 }

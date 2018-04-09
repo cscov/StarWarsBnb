@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { signup, login, logout } from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
+import { toggleModal } from './actions/modal_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('root');
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logout = logout;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.toggleModal = toggleModal;
   // TESTING END
 
   ReactDOM.render(<Root store={store} />, rootEl);
