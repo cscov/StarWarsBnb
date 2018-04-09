@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates :email_address, presence: true, uniqueness: true
   attr_reader :password
 
-  has_many :spots,
+  has_many :spots, optional: true,
   class_name: :Spot,
   primary_key: :id,
   foreign_key: :host_id
