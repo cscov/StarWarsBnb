@@ -19,9 +19,8 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_many :spots, optional: true,
-  class_name: :Spot,
-  primary_key: :id,
-  foreign_key: :host_id
+  class_name: :Spot
+
 
   def reset_session_token!
     self.session_token = SecureRandom.urlsafe_base64(16)

@@ -54,7 +54,7 @@
 #
 
 class Spot < ApplicationRecord
-  belongs_to :host, optional: true,
+  belongs_to :host,
              class_name: :User,
              primary_key: :id,
              foreign_key: :host_id
