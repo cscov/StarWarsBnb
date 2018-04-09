@@ -20,6 +20,7 @@ class User < ApplicationRecord
 
   has_many :spots,
   class_name: :Spot,
+  primary_key: :id,
   foreign_key: :host_id
 
   def reset_session_token!

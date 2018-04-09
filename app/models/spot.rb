@@ -56,6 +56,7 @@
 class Spot < ApplicationRecord
   belongs_to :host,
              class_name: :User,
+             primary_key: :id,
              foreign_key: :host_id
 
   validates :host_id, :rental_type, :title, :planet, :num_guests,
