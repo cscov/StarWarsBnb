@@ -14,6 +14,8 @@ import faRebel from '@fortawesome/fontawesome-free-brands/faRebel';
 import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import faLock from '@fortawesome/fontawesome-free-solid/faLock';
+import SpotsIndex from './spots/spots_index';
+
 fontawesome.library.add(brands, regular, solid, faRebel, faEnvelope,
   faUser, faLock);
 
@@ -39,10 +41,10 @@ const App = () => (
         <Switch>
           <AuthRoute path='/signup' component={SignupFormContainer} />
           <AuthRoute path='/login' component={LoginFormContainer} />
+          <Route path="/rooms" component={SpotsIndex} />
           <Route exact path='/'/>
         </Switch>
       </div>
-
   </div>
 );
 

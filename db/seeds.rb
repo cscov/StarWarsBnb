@@ -10,7 +10,58 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Spot.create!([{ host_id: 1,
+host1 = User.create!({ password: 123456, email_address: 'cscovdarth',
+                     first_name: 'Darth', planet: 'Tatooine',
+                     verified: false,
+                     bio: "The most pwoerful Sith Lord ever",
+                     avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253129/darth_vader.webp",
+                     phone_number: "(123) 456-4567", superhost: false })
+host2 = User.create!({ password: 123456, email_address: 'cscovhan',
+  first_name: 'Han', planet: 'Corellia',
+  verified: false, bio: "Smuggler with a heart of gold",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253162/han.png",
+  phone_number: "(123) 456-8901", superhost: false })
+
+host3 = User.create!({ password: 123456, email_address: 'cscovjyn',
+  first_name: 'Jyn', planet: "La'Mu", verified: false,
+  bio: "Just a rebel",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253133/jyn-erso_1.jpg",
+  phone_number: "(123) 456-2345", superhost: false })
+
+host4 = User.create({ password: 123456, email_address: 'cscovLando',
+  first_name: 'Lando', planet: "Socorro", verified: false,
+  bio: "I'm an entrepreneur. Let's make a deal",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253127/Lando_WoSW.jpg",
+  phone_number: "(123) 456-7234", superhost: false })
+
+host5 = User.create!({ password: 123456, email_address: 'cscovobi',
+  first_name: 'Obi-Wan', planet: 'Stewjon',
+  verified: false,
+  bio: "I will return more powerful than you can
+  possibly imagine",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253161/obi_wan.jpg",
+  phone_number: "(123) 456-8346", superhost: false })
+
+host6 = User.create!({ password: 123456, email_address: 'cscovpoe',
+  first_name: 'Poe', planet: 'Yavin IV',
+  verified: false, bio: "Rebel. The best pilot
+  you've ever seen with the greatest leather jackets.",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253147/poe.jpg",
+  phone_number: "(123) 456-2908", superhost: false })
+
+host7 = User.create!({ password: 123456, email_address: 'cscovluke',
+  first_name: 'Luke', planet: 'Tatooine',
+  verified: false, bio: "The folksiest farmboy
+  you'll ever meet.", avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253122/luke.jpg",
+  phone_number: "(123) 456-5238", superhost: false })
+
+host8 = User.create!({ password: 123456, email_address: 'cscov',
+  first_name: 'Leia', planet: 'Alderaan', verified: false,
+  bio: "The only princess that matters.",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253137/leia.jpg",
+  phone_number: "(123) 456-7216", superhost: false })
+
+Spot.create!([{ host_id: host1.id,
                 rental_type: "ENTIRE HOUSE",
                 title: "Windswept Dunes",
                 planet: "Tatooine",
@@ -67,7 +118,7 @@ Spot.create!([{ host_id: 1,
                 house_manual: "No parties. Quiet hours start at 10PM",
                 num_reviews: 101 },
 
-            {   host_id: 2,
+            {   host_id: host2.id,
                 rental_type: "ENTIRE CAVE",
                 title: "The Ice Palace",
                 planet: "Hoth",
@@ -124,7 +175,7 @@ Spot.create!([{ host_id: 1,
                 This is a fun cave",
                 num_reviews: 52 },
 
-              { host_id: 3,
+              { host_id: host3.id,
                 rental_type: "ENTIRE HOUSE",
                 title: "Farming Comforts",
                 planet: "La'Mu",
@@ -185,7 +236,7 @@ Spot.create!([{ host_id: 1,
                 lock_instructions: "The door code is 7321.",
                 num_reviews: 75 },
 
-              { host_id: 4,
+              { host_id: host4.id,
                 rental_type: "ENTIRE APARTMENT",
                 title: "Come Gamble",
                 planet: "Bespin",
@@ -244,7 +295,7 @@ Spot.create!([{ host_id: 1,
                 lock_instructions: "The door code is 4523.",
                 num_reviews: 306 },
 
-              { host_id: 5,
+              { host_id: host5.id,
                 rental_type: "ENTIRE TREEHOUSE",
                 title: "Go Camping",
                 planet: "Endor",
@@ -301,7 +352,7 @@ Spot.create!([{ host_id: 1,
                 hours start at 12AM",
                 num_reviews: 59 },
 
-              { host_id: 6,
+              { host_id: host6.id,
                 rental_type: "PRIVATE ROOM",
                 title: "Relax on the Beach",
                 planet: "Scarif",
@@ -358,7 +409,7 @@ Spot.create!([{ host_id: 1,
                 house_manual: "No parties. Quiet hours start at 10PM",
                 num_reviews: 67 },
 
-              { host_id: 7,
+              { host_id: host7.id,
                 rental_type: "ENTIRE HUT",
                 title: "Get Away From It All",
                 planet: "Ach-To",
@@ -414,7 +465,7 @@ Spot.create!([{ host_id: 1,
                 house_manual: "No parties. Quiet hours start at sundown.",
                 num_reviews: 3 },
 
-              { host_id: 8,
+              { host_id: host8.id,
                 rental_type: "ENTIRE PALACE",
                 title: "Royal Accomodations",
                 planet: "Naboo",
