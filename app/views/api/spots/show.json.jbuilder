@@ -1,1 +1,1 @@
-json.partial! 'spot', spot: @spot
+json.extract! 

@@ -522,3 +522,35 @@ spot1 = Spot.create!({ host_id: host1.id,
                 house_manual: "Please let the servants know if you
                 need anything, and remove your shoes while indoors.",
                 num_reviews: 521 })
+
+tatooine1 = Photo.create!({url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253122/moisture_farm.jpg"})
+tatooine2 = Photo.create!({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253149/jabbaspalace.jpg" })
+tatooine3 = Photo.create!({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253124/bantha.jpg" })
+
+scarif1 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253126/scarif_facility.png"})
+scarif2 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253126/scarif_beach.jpg"})
+scarif3 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253159/shield_gate.png"})
+
+naboo1 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253166/naboo_waterfall.jpg"})
+naboo2 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253173/naboo_lake.png"})
+naboo3 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253171/Theed.png"})
+
+lamu1 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253148/la_mu_beach.png"})
+lamu2 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253144/Erso_homestead.png"})
+lamu3 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253136/farming.png"})
+
+hoth1 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253141/hoth_snowfield.jpg"})
+hoth2 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253130/hoth_atats.jpg"})
+hoth3 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253128/hoth_planet.jpg"})
+
+endor1 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253162/ewok_village.jpg"})
+endor2 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253149/endor_trees.jpg"})
+endor3 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253159/endor_planet.png"})
+
+bespin1 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253160/bespin_city.jpg"})
+bespin2 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253159/Bespin_skyscrapers.png"})
+bespin3 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253151/bespin_skyline.jpg"})
+
+achto1 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253146/ach_to_aerial.jpg"})
+achto2 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253149/ach_to_huts.jpg"})
+achto3 = Photo.create({ url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253136/Ahch-To_surface.png"})
