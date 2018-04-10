@@ -27,13 +27,63 @@ $standardFontSize: 19px;
     margin: 0 auto;
     flex-direction: row;
 
-    figure {
-      width: 40%;
-      border-radius: 4px;
+    .index-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
-      img {
-        width: 100%;
+      .top-line {
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+
+        .rental-type {
+          padding-right: 2em;
+        }
+
+        .planet {
+          list-style-type: disc;
+        }
       }
+
+      figure {
+        width: 40%;
+        border-radius: 4px;
+        margin-left: 0em;
+
+        img {
+          width: 100%;
+        }
+      }
+      .title {
+        font-weight: 500;
+        color: $airBnbGray;
+        font-size: 1.5em;
+      }
+
+      .daily-rate {
+        color: $airBnbLightGray;
+        font-weight: 300;
+      }
+
+      .rating {
+        color: $airBnbTeal;
+        font-size: 0.5em;
+        display: inline;
+
+        .num-reviews {
+          color: $airBnbGray;
+          font-size: 1.5em;
+          padding-left: 0.5em;
+        }
+      }
+
     }
+
   }
+}
+
+.filter {
+  color: $airBnbPurple;
+  font-weight: 500;
 }
