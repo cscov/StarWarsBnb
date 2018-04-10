@@ -28,7 +28,7 @@ host3 = User.create!({ password: 123456, email_address: 'cscovjyn',
   avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253133/jyn-erso_1.jpg",
   phone_number: "(123) 456-2345", superhost: false })
 
-host4 = User.create({ password: 123456, email_address: 'cscovLando',
+host4 = User.create!({ password: 123456, email_address: 'cscovLando',
   first_name: 'Lando', planet: "Socorro", verified: false,
   bio: "I'm an entrepreneur. Let's make a deal",
   avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253127/Lando_WoSW.jpg",
@@ -61,7 +61,7 @@ host8 = User.create!({ password: 123456, email_address: 'cscov',
   avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253137/leia.jpg",
   phone_number: "(123) 456-7216", superhost: false })
 
-Spot.create!([{ host_id: host1.id,
+spot1 = Spot.create!({ host_id: host1.id,
                 rental_type: "ENTIRE HOUSE",
                 title: "Windswept Dunes",
                 planet: "Tatooine",
@@ -116,9 +116,9 @@ Spot.create!([{ host_id: host1.id,
                 address: "23 Dune Lane, Mos Eisley, Tatooine",
                 directions: "Just head west from the spaceport",
                 house_manual: "No parties. Quiet hours start at 10PM",
-                num_reviews: 101 },
+                num_reviews: 101 })
 
-            {   host_id: host2.id,
+            spot2 = Spot.create!({   host_id: host2.id,
                 rental_type: "ENTIRE CAVE",
                 title: "The Ice Palace",
                 planet: "Hoth",
@@ -173,9 +173,9 @@ Spot.create!([{ host_id: host1.id,
                 landing pad on your left",
                 house_manual: "There are no rules in this cave.
                 This is a fun cave",
-                num_reviews: 52 },
+                num_reviews: 52 })
 
-              { host_id: host3.id,
+              spot3 = Spot.create!({ host_id: host3.id,
                 rental_type: "ENTIRE HOUSE",
                 title: "Farming Comforts",
                 planet: "La'Mu",
@@ -234,9 +234,9 @@ Spot.create!([{ host_id: host1.id,
                 house_manual: "No parties. Quiet hours start at
                 10PM. Suitable for pets.",
                 lock_instructions: "The door code is 7321.",
-                num_reviews: 75 },
+                num_reviews: 75 })
 
-              { host_id: host4.id,
+              spot4 = Spot.create!({ host_id: host4.id,
                 rental_type: "ENTIRE APARTMENT",
                 title: "Come Gamble",
                 planet: "Bespin",
@@ -293,9 +293,9 @@ Spot.create!([{ host_id: host1.id,
                 house_manual: "Just have fun. Quiet hours are
                 technically at 2AM but are rarely enforced.",
                 lock_instructions: "The door code is 4523.",
-                num_reviews: 306 },
+                num_reviews: 306 })
 
-              { host_id: host5.id,
+              spot5 = Spot.create!({ host_id: host5.id,
                 rental_type: "ENTIRE TREEHOUSE",
                 title: "Go Camping",
                 planet: "Endor",
@@ -350,9 +350,9 @@ Spot.create!([{ host_id: host1.id,
                 you will soon reach the village.",
                 house_manual: "Small parties are allowed. Quiet
                 hours start at 12AM",
-                num_reviews: 59 },
+                num_reviews: 59 })
 
-              { host_id: host6.id,
+              spot6 = Spot.create!({ host_id: host6.id,
                 rental_type: "PRIVATE ROOM",
                 title: "Relax on the Beach",
                 planet: "Scarif",
@@ -407,9 +407,9 @@ Spot.create!([{ host_id: host1.id,
                 address: "23 Dune Lane, Mos Eisley, Tatooine",
                 directions: "Just head west from the spaceport",
                 house_manual: "No parties. Quiet hours start at 10PM",
-                num_reviews: 67 },
+                num_reviews: 67 })
 
-              { host_id: host7.id,
+              spot7 = Spot.create!({ host_id: host7.id,
                 rental_type: "ENTIRE HUT",
                 title: "Get Away From It All",
                 planet: "Ach-To",
@@ -463,9 +463,9 @@ Spot.create!([{ host_id: host1.id,
                 directions: "If you found this place, congratulations!
                 I did not plan on having any visitors.",
                 house_manual: "No parties. Quiet hours start at sundown.",
-                num_reviews: 3 },
+                num_reviews: 3 })
 
-              { host_id: host8.id,
+              spot8 = Spot.create!({ host_id: host8.id,
                 rental_type: "ENTIRE PALACE",
                 title: "Royal Accomodations",
                 planet: "Naboo",
@@ -521,4 +521,4 @@ Spot.create!([{ host_id: host1.id,
                 chaffeur will pick you up.",
                 house_manual: "Please let the servants know if you
                 need anything, and remove your shoes while indoors.",
-                num_reviews: 521 }])
+                num_reviews: 521 })
