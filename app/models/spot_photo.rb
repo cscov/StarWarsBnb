@@ -10,7 +10,7 @@
 #
 
 class SpotPhoto < ApplicationRecord
-  validates :photo_id, :spots_id, presence: true
+  validates :photo_id, :spot_id, presence: true
 
   belongs_to :photo,
               class_name: :Photo,
