@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410162132) do
+ActiveRecord::Schema.define(version: 20180410171841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20180410162132) do
     t.string "url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "spot_photos", force: :cascade do |t|
+    t.integer "photo_id", null: false
+    t.integer "spot_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id"], name: "index_spot_photos_on_photo_id"
+    t.index ["spot_id"], name: "index_spot_photos_on_spot_id"
   end
 
   create_table "spots", force: :cascade do |t|
@@ -91,5 +100,7 @@ ActiveRecord::Schema.define(version: 20180410162132) do
     t.index ["session_token"], name: "index_users_on_session_token"
   end
 
+  add_foreign_key "spot_photos", "photos"
+  add_foreign_key "spot_photos", "spots"
   add_foreign_key "spots", "users", column: "host_id"
 end

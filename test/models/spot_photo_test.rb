@@ -1,16 +1,17 @@
 # == Schema Information
 #
-# Table name: photos
+# Table name: spot_photos
 #
 #  id         :integer          not null, primary key
-#  url        :string           not null
+#  photo_id   :integer          not null
+#  spot_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class PhotoTest < ActiveSupport::TestCase
+class SpotPhotoTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -51,6 +51,7 @@
 #  created_at                    :datetime         not null
 #  updated_at                    :datetime         not null
 #  host_id                       :integer          not null
+#  num_reviews                   :integer          not null
 #
 
 class Spot < ApplicationRecord
@@ -58,6 +59,10 @@ class Spot < ApplicationRecord
              class_name: :User,
              primary_key: :id,
              foreign_key: :host_id
+
+  has_many :photos,
+  through: :spot_photos,
+  source: :photo
 
   validates :host_id, :rental_type, :title, :planet, :num_guests,
             :num_bedrooms, :num_baths, :num_beds, :daily_rate, :description,
