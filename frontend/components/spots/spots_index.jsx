@@ -1,22 +1,26 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import SpotsIndexItem from './spots_index_item';
 
 class SpotsIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.spots;
   }
 
   componentDidMount() {
-    console.log(this.props.fetchAllSpots());
+    this.props.fetchAllSpots();
   }
 
   render() {
     const spots = this.props.spots.map( (spot, idx) => {
-      return (<li key={idx}>{spot}</li>);
+      return (
+                <SpotsIndexItem key={idx} spot={spot} />
+              );
     });
     return (
       <div>
-        <h1>Explore StarWarsBnb</h1>
+        <h2>Homes across the galaxy</h2>
+        {console.log(spots)}
         <ul>
           {spots}
         </ul>
@@ -25,4 +29,4 @@ class SpotsIndex extends React.Component {
   }
 }
 
-export default SpotsIndex;
+export default withRouter(SpotsIndex);

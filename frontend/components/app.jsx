@@ -14,7 +14,7 @@ import faRebel from '@fortawesome/fontawesome-free-brands/faRebel';
 import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import faLock from '@fortawesome/fontawesome-free-solid/faLock';
-import SpotsIndex from './spots/spots_index';
+import SpotsIndexContainer from './spots/spots_index_container';
 
 fontawesome.library.add(brands, regular, solid, faRebel, faEnvelope,
   faUser, faLock);
@@ -30,19 +30,19 @@ const App = () => (
             <span className="fa-1.5x">
               <FontAwesomeIcon icon={["fas", "search"]} />
             </span>
-            <input type="text" placeholder="Try 'Tatooine'" />
+            <input type="text" placeholder="Try &quot;Tatooine&quot;" />
           </div>
         </div>
         <div className="right-nav">
           <SessionButtonsContainer />
         </div>
       </nav>
-      <div className="session-form">
+      <div className="content">
         <Switch>
           <AuthRoute path='/signup' component={SignupFormContainer} />
           <AuthRoute path='/login' component={LoginFormContainer} />
-          <Route path="/rooms" component={SpotsIndex} />
-          <Route exact path='/'/>
+          <Route path="/rooms" component={SpotsIndexContainer} />
+          <Redirect to='/rooms'/>
         </Switch>
       </div>
   </div>

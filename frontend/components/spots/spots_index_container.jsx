@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllSpots: () => dispatch(fetchAllSpots)
+  fetchAllSpots: () => dispatch(fetchAllSpots())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpotsIndex);
