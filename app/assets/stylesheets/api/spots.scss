@@ -1,3 +1,39 @@
 // Place all the styles related to the api::spots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$airBnbPink: #FF5A5F;
+$airBnbTeal: #008489;
+$airBnbGray: #484848;
+$airBnbLightGray: rgb(120, 120, 120);
+$airBnbPurple: rgb(87, 37, 51);
+$airBnbBorderColor: #DBDBDB;
+$standardFontSize: 19px;
+
+.index {
+  width: 100%;
+
+  h2 {
+    position: relative;
+    right: 12em;
+    margin-top: 1em;
+    color: $airBnbGray;
+    font-weight: 500;
+  }
+  .index-list {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    flex-direction: row;
+
+    figure {
+      width: 40%;
+      border-radius: 4px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

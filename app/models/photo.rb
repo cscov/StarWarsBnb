@@ -11,6 +11,11 @@
 class Photo < ApplicationRecord
   validates :url, presence: true
 
+  has_one :spot_photo,
+  class_name: :SpotPhoto,
+  primary_key: :id,
+  foreign_key: :photo_id
+
   has_one :spot,
   through: :spot_photos,
   source: :spot

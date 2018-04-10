@@ -18,10 +18,9 @@ class SpotsIndex extends React.Component {
               );
     });
     return (
-      <div>
+      <div className="index">
         <h2>Homes across the galaxy</h2>
-        {console.log(spots)}
-        <ul>
+        <ul className="index-list">
           {spots}
         </ul>
       </div>

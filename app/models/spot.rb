@@ -60,9 +60,18 @@ class Spot < ApplicationRecord
              primary_key: :id,
              foreign_key: :host_id
 
+  has_many :spot_photos,
+  class_name: :SpotPhoto,
+  primary_key: :id,
+  foreign_key: :spot_id
+
   has_many :photos,
   through: :spot_photos,
   source: :photo
+
+  def spot_first_photo
+    self.photos.first.url
+  end
 
   validates :host_id, :rental_type, :title, :planet, :num_guests,
             :num_bedrooms, :num_baths, :num_beds, :daily_rate, :description,
