@@ -9,79 +9,83 @@ $airBnbPurple: rgb(87, 37, 51);
 $airBnbBorderColor: #DBDBDB;
 $standardFontSize: 19px;
 
-.index {
+.content {
   width: 100%;
 
-  h2 {
-    position: relative;
-    right: 12em;
-    margin-top: 1em;
-    color: $airBnbGray;
-    font-weight: 500;
-  }
-  .index-list {
-    width: 85%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .index {
+    width: 90%;
     margin: 0 auto;
-    flex-direction: row;
 
-    .index-item {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    h2 {
+      margin-top: 2em;
+      color: $airBnbGray;
+      font-weight: 500;
+      padding-left: 0.5em;
+    }
+    .index-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
 
-      .top-line {
+      .index-item {
         display: flex;
-        flex-direction: row;
-        width: 40%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1em;
+        margin-bottom: 2em;
 
-        .rental-type {
-          padding-right: 2em;
-        }
-
-        .planet {
-          list-style-type: disc;
-        }
-      }
-
-      figure {
-        width: 40%;
-        border-radius: 4px;
-        margin-left: 0em;
-
-        img {
+        .top-line {
+          display: flex;
           width: 100%;
+
+          .rental-type {
+            padding-right: 2em;
+          }
+
+          .planet {
+            list-style-type: disc;
+          }
         }
-      }
-      .title {
-        font-weight: 500;
-        color: $airBnbGray;
-        font-size: 1.5em;
-      }
 
-      .daily-rate {
-        color: $airBnbLightGray;
-        font-weight: 300;
-      }
+        figure {
+          width: 100%;
+          border-radius: 4px;
+          margin-left: 0em;
 
-      .rating {
-        color: $airBnbTeal;
-        font-size: 0.5em;
-        display: inline;
-
-        .num-reviews {
+          img {
+            width: 100%;
+            height: 203px;
+          }
+        }
+        .title {
+          font-weight: 500;
           color: $airBnbGray;
           font-size: 1.5em;
-          padding-left: 0.5em;
         }
+
+        .daily-rate {
+          color: $airBnbLightGray;
+          font-weight: 300;
+        }
+
+        .rating {
+          color: $airBnbTeal;
+          font-size: 0.5em;
+          display: inline;
+
+          .num-reviews {
+            color: $airBnbGray;
+            font-size: 1.5em;
+            padding-left: 0.5em;
+          }
+        }
+
       }
 
     }
-
   }
 }
+
 
 .filter {
   color: $airBnbPurple;
