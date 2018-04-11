@@ -6,8 +6,8 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      first_name: "",
-      email_address: "",
+      firstName: "",
+      emailAddress: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -65,13 +65,13 @@ class SessionForm extends React.Component {
 
               <form onSubmit={this.handleSubmit}>
                 <div className="form-fields">
-                  <input type="text" value={this.state.first_name}
+                  <input type="text" value={this.state.firstName}
                     placeholder="First Name"
                     onChange={this.handleInputChange('firstName')} />
                   <div className="icon"><FontAwesomeIcon icon={"user"} /></div>
                 </div>
                 <div className="form-fields">
-                  <input type="text" value={this.state.email_address}
+                  <input type="text" value={this.state.emailAddress}
                     placeholder="Email Address"
                     onChange={this.handleInputChange('emailAddress')} />
                   <div className="icon"><FontAwesomeIcon icon={"envelope"} /></div>
@@ -111,7 +111,7 @@ class SessionForm extends React.Component {
 
               <form onSubmit={this.handleSubmit}>
                 <div className="form-fields">
-                  <input type="text" value={this.state.email_address}
+                  <input type="text" value={this.state.emailAddress}
                     placeholder="Email Address"
                     onChange={this.handleInputChange('emailAddress')} />
                   <div className="icon"><FontAwesomeIcon icon={"envelope"} /></div>

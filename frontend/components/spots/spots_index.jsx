@@ -1,6 +1,7 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Route } from 'react-router-dom';
 import SpotsIndexItem from './spots_index_item';
+import SpotShow from './spot_show';
 
 class SpotsIndex extends React.Component {
   constructor(props) {
@@ -14,11 +15,12 @@ class SpotsIndex extends React.Component {
   render() {
     const spots = this.props.spots.map( (spot, idx) => {
       return (
-                <SpotsIndexItem key={idx} spot={spot} />
+              <SpotsIndexItem key={idx} spot={spot} fetchSpot={this.props.fetchSpot} />
               );
     });
     return (
       <div className="index">
+        <Route path='/rooms/:roomId' component={SpotShow} />
         <h2>Homes across the galaxy</h2>
         <ul className="index-list">
           {spots}

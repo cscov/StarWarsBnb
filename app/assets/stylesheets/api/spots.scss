@@ -30,7 +30,7 @@ $standardFontSize: 19px;
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
 
-      .index-item {
+      .index-item, .index-item a {
         display: flex;
         flex-direction: column;
         align-items: flex-start;

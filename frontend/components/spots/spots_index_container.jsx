@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchAllSpots } from '../../actions/spots_actions';
+import { fetchAllSpots, fetchSpot } from '../../actions/spots_actions';
 import SpotsIndex from './spots_index';
 
 const mapStateToProps = state => ({
@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllSpots: () => dispatch(fetchAllSpots())
+  fetchAllSpots: () => dispatch(fetchAllSpots()),
+  fetchSpot: (id) => dispatch(fetchSpot(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpotsIndex);

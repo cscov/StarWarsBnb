@@ -73,6 +73,10 @@ class Spot < ApplicationRecord
     self.photos.first.url
   end
 
+  def spot_photo_urls
+    url_arr = self.photos.map { |photo| photo.url  }
+  end
+
   validates :host_id, :rental_type, :title, :planet, :num_guests,
             :num_bedrooms, :num_baths, :num_beds, :daily_rate, :description,
             :basic_amenity_category,
