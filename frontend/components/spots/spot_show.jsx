@@ -2,6 +2,10 @@ import React from 'react';
 import SimpleSlider from './slider';
 import fontawesome from '@fortawesome/fontawesome';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+import faUsers from '@fortawesome/fontawesome-free-solid/faUsers';
+import faBed from '@fortawesome/fontawesome-free-solid/faBed';
+import faCouch from '@fortawesome/fontawesome-free-solid/faCouch';
+import faBath from '@fortawesome/fontawesome-free-solid/faBath';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 class SpotShow extends React.Component {
@@ -58,26 +62,40 @@ class SpotShow extends React.Component {
           <span className="planet">
             {spot.planet}
           </span>
-          <span className="num-guests">
-            {spot.numGuests}
-          </span>
-          <span className="num-bedrooms">
-            {spot.numBedrooms}
-          </span>
-          <span className="num-beds">
-            {spot.numBeds}
-          </span>
-          <span className="num-baths">
-            {spot.numBaths}
-          </span>
+          <section className="guest-demographics">
+            <section className="guests">
+              <span className="icon"><FontAwesomeIcon icon={["fas", "users"]} /></span>
+              <span className="num-guests demographic">
+                {spot.numGuests} guests
+              </span>
+            </section>
+            <section className="room">
+              <span className="icon"><FontAwesomeIcon icon={["fas", "couch"]} /></span>
+              <span className="num-bedrooms demographic">
+                {spot.numBedrooms} bedroom
+              </span>
+            </section>
+            <section className="bed">
+              <span className="icon"><FontAwesomeIcon icon={["fas", "bed"]} /></span>
+              <span className="num-beds demographic">
+                {spot.numBeds} bed
+              </span>
+            </section>
+            <section className="bath">
+              <span className="icon"><FontAwesomeIcon icon={["fas", "bath"]} /></span>
+              <span className="num-baths demographic">
+                {spot.numBaths} bath
+              </span>
+            </section>
+          </section>
         </section>
-        <span className="hosted-by">
-          {spot.firstName}
+        <section className="hosted-by">
           <img src={spot.avatar} />
-        </span>
+          <span className="host">Hosted by {spot.firstName}</span>
+        </section>
         <p className="description">{spot.description}</p>
         <section className="amenities">
-          <h3>Amenities</h3>
+          <h3 className="section-title">Amenities</h3>
           <section className="amenities-modal">
             <section className="basic-amenity-category">
               <h3>Basic</h3>
@@ -124,15 +142,15 @@ class SpotShow extends React.Component {
           </section>
         </section>
         <section className="sleeping">
-          <h3>Sleeping arrangements</h3>
+          <h3 className="section-title">Sleeping arrangements</h3>
           <span>{spot.sleepingArrangements}</span>
         </section>
         <section className="rules">
-          <h3>House Rules</h3>
+          <h3 className="section-title">House Rules</h3>
           <p className="house-rules">{spot.houseRules}</p>
         </section>
         <section className="cancellation">
-          <h3>Cancellations</h3>
+          <h3 className="section-title">Cancellations</h3>
           <p className="policy">{spot.cancellationPolicy}</p>
         </section>
         <section className="reviews">

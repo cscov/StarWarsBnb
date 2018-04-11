@@ -128,6 +128,8 @@ $standardFontSize: 19px;
     .details {
       display: flex;
       flex-direction: column;
+      border-bottom: 1px solid $airBnbBorderColor;
+      padding-bottom: 2em;
 
       .show-title {
         font-size: 2em;
@@ -137,7 +139,51 @@ $standardFontSize: 19px;
 
       .planet {
         color: $airBnbLightGray;
+        font-weight: 300;
       }
+    }
+    .guest-demographics {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1em;
+      justify-content: space-between;
+      width: 70%;
+
+      .icon {
+        color: $airBnbGray;
+        padding-right: 0.5em;
+      }
+       .demographic {
+        color: $airBnbLightGray;
+        font-weight: 300;
+      }
+    }
+    .hosted-by {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+      margin-top: 2em;
+      align-items: center;
+      margin-bottom: 2em;
+
+      img {
+        width: 51px;
+        height: 51px;
+        border-radius: 50px;
+      }
+
+      .host {
+        color: $airBnbGray;
+        padding-left: 1.5em;
+      }
+    }
+    .description {
+      color: $airBnbLightGray;
+      font-weight: 300;
+    }
+    .section-title {
+      font-weight: 500;
+      padding-left: 0em;
     }
   }
 }

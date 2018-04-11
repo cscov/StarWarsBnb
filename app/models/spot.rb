@@ -93,4 +93,8 @@ class Spot < ApplicationRecord
   :carbon_monoxide_detector, :smoke_detector, :first_aid_kit,
   :not_included_amenity_category, :washer, :private_entrance, in: [true, false]
 
+  def amenities
+    self.columns.select{ |c| c.type == :boolean }
+  end
+
 end
