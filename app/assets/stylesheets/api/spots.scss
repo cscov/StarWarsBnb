@@ -88,10 +88,56 @@ $standardFontSize: 19px;
 
     }
   }
-}
-.filter {
-  color: $airBnbPurple;
-  font-weight: 500;
-}
+  .filter {
+    color: $airBnbPurple;
+    font-weight: 500;
+  }
 
-// show page
+  // show page
+  .spot-details {
+    width: 80%;
+    margin: 0 auto;
+
+    .book {
+      border-bottom: 1px solid $airBnbBorderColor;
+      float: right;
+
+       #from, #per-night {
+        color: $airBnbLightGray;
+        font-size: 0.75em;
+      }
+
+      .daily-rate {
+        color: $airBnbGray;
+        font-weight: 500;
+        font-size: 1.5em;
+        padding-right: 0.5em;
+      }
+
+      .rating {
+        color: $airBnbTeal;
+        font-size: 0.5em;
+        display: inline;
+      }
+      #small-reviews {
+        color: $airBnbGray;
+        font-size: 1.5em;
+        padding-left: 0.5em;
+      }
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+
+      .show-title {
+        font-size: 2em;
+        color: $airBnbGray;
+        line-height: 1.5em;
+      }
+
+      .planet {
+        color: $airBnbLightGray;
+      }
+    }
+  }
+}

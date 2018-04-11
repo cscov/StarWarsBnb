@@ -1,4 +1,8 @@
 import React from 'react';
+import SimpleSlider from './slider';
+import fontawesome from '@fortawesome/fontawesome';
+import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 class SpotShow extends React.Component {
   constructor(props) {
@@ -7,8 +11,6 @@ class SpotShow extends React.Component {
   }
 
   componentDidMount() {
-    console.log("component mounted");
-    console.log(this.props.fetchSpot);
     this.props.fetchSpot(this.props.match.params.roomId);
   }
 
@@ -23,40 +25,52 @@ class SpotShow extends React.Component {
     if (!spot) {
       return null;
     }
+    const photos = spot.spotPhotoUrls;
+    console.log(`photos is: ${photos}`);
     return (
+      <div className="spot-details">
       <React.Fragment>
         <ul className="photo-carousel">
-          {spot.spotPhotoUrls}
+
         </ul>
         <section className="book">
-          <span id="from">From</span>
-          <span className="daily-rate">{spot.dailyRate}</span>
-          <span id="per-night">per night</span>
-          <span id="small-reviews">{spot.numReviews}</span>
+          <span id="from">From</span><br />
+          <span className="daily-rate">${spot.dailyRate}</span>
+          <span id="per-night"> per night</span><br />
+          <div className="rating">
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <span id="small-reviews">{spot.numReviews}</span>
+          </div>
           <form className="booking-form">
           </form>
         </section>
-        <span className="show-rental-type">
-          {spot.rentalType}
-        </span>
-        <span className="show-planet">
-          {spot.planet}
-        </span>
-        <span className="show-title">
-          {spot.title}
-        </span>
-        <span className="num-guests">
-          {spot.numGuests}
-        </span>
-        <span className="num-bedrooms">
-          {spot.numBedrooms}
-        </span>
-        <span className="num-beds">
-          {spot.numBeds}
-        </span>
-        <span className="num-baths">
-          {spot.numBaths}
-        </span>
+        <section className="details">
+          <span className="filter rental-type">
+            {spot.rentalType}
+          </span>
+          <h2 className="show-title">
+            {spot.title}
+          </h2>
+          <span className="planet">
+            {spot.planet}
+          </span>
+          <span className="num-guests">
+            {spot.numGuests}
+          </span>
+          <span className="num-bedrooms">
+            {spot.numBedrooms}
+          </span>
+          <span className="num-beds">
+            {spot.numBeds}
+          </span>
+          <span className="num-baths">
+            {spot.numBaths}
+          </span>
+        </section>
         <span className="hosted-by">
           {spot.firstName}
           <img src={spot.avatar} />
@@ -128,7 +142,7 @@ class SpotShow extends React.Component {
           <p className="getting-around">{spot.gettingAround}</p>
           <section id="map"></section>
         </section>
-      </React.Fragment>
+      </React.Fragment></div>
     );
   }
 }

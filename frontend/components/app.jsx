@@ -16,9 +16,11 @@ import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import faLock from '@fortawesome/fontawesome-free-solid/faLock';
 import SpotsIndexContainer from './spots/spots_index_container';
 import SpotShowContainer from './spots/spot_show_container';
+import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+
 
 fontawesome.library.add(brands, regular, solid, faRebel, faEnvelope,
-  faUser, faLock);
+  faUser, faLock, faStar);
 
 const App = () => (
   <div className="app">

@@ -15,7 +15,7 @@ class SpotsIndex extends React.Component {
   render() {
     const spots = this.props.spots.map( (spot, idx) => {
       return (
-              <SpotsIndexItem key={idx} spot={spot} fetchSpot={this.props.fetchSpot} />
+              <SpotsIndexItem key={idx} spot={spot}/>
               );
     });
     return (
