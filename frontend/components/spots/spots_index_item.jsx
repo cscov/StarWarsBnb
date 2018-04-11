@@ -10,7 +10,7 @@ const SpotsIndexItem = (props) => {
       <li className="index-item">
         <Link to={`/rooms/${props.spot.id}`}>
         <React.Fragment>
-          <figure><img src={props.spot.spot_first_photo} /></figure>
+          <figure><img src={props.spot.spotFirstPhoto} /></figure>
           <ul className="top-line">
             <li className="rental-type filter">{props.spot.rentalType}</li>
             <li className="planet filter">{props.spot.planet}</li>

@@ -43,10 +43,6 @@ class SessionForm extends React.Component {
     let header;
     let form;
 
-    if (!this.props.modalOpen) {
-      return null;
-    }
-
     if (this.props.formType === 'signup') {
       sessionPath = '/login';
       altSessionMessage = "Already have an account? ";
