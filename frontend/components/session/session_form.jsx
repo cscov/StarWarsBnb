@@ -20,7 +20,8 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then( this.props.history.push('/rooms'));
+    this.props.processForm(user);
+
   }
 
   renderErrors() {
@@ -53,21 +54,22 @@ class SessionForm extends React.Component {
       header = 'Sign Up';
       form = (
         <React.Fragment>
-          <div className="form-content">
-            <div className="form-top">
-              <Link to="/"><span className="modal-close">&times;</span></Link>
-              <h3>{header}</h3>
-            </div>
-
-            <div className="error-messages">{this.renderErrors()}</div>
-
-            <form onSubmit={this.handleSubmit}>
-              <div className="form-fields">
-                <input type="text" value={this.state.first_name}
-                  placeholder="First Name"
-                  onChange={this.handleInputChange('firstName')} />
-                <div className="icon"><FontAwesomeIcon icon={"user"} /></div>
+          <div className="session-form">
+            <div className="form-content">
+              <div className="form-top">
+                <Link to="/"><span className="modal-close">&times;</span></Link>
+                <h3>{header}</h3>
               </div>
+
+              <div className="error-messages">{this.renderErrors()}</div>
+
+              <form onSubmit={this.handleSubmit}>
+                <div className="form-fields">
+                  <input type="text" value={this.state.first_name}
+                    placeholder="First Name"
+                    onChange={this.handleInputChange('firstName')} />
+                  <div className="icon"><FontAwesomeIcon icon={"user"} /></div>
+                </div>
                 <div className="form-fields">
                   <input type="text" value={this.state.email_address}
                     placeholder="Email Address"
@@ -81,13 +83,14 @@ class SessionForm extends React.Component {
                   <div className="icon"><FontAwesomeIcon icon={"lock"} /></div>
                 </div>
                 <div className="form-button"><input className="form-submit" type="submit" value={header} /></div>
-            </form>
-            <div className="alt-session">
-              <Link to={sessionPath}>{altSessionMessage}
-                <span>{sessionLink}</span></Link>
-            </div>
+              </form>
+              <div className="alt-session">
+                <Link to={sessionPath}>{altSessionMessage}
+                  <span>{sessionLink}</span></Link>
+                </div>
+              </div>
+              <Link to="/"><div className="lightbox"></div></Link>
           </div>
-        <Link to="/"><div className="lightbox"></div></Link>
         </React.Fragment>
       );
     } else {
@@ -97,35 +100,37 @@ class SessionForm extends React.Component {
       header = 'Log In';
       form = (
         <React.Fragment>
-        <div className="form-content">
-          <div className="form-top">
-            <Link to="/"><span className="modal-close">&times;</span></Link>
-            <h3>{header}</h3>
-          </div>
-
-          <div className="error-messages">{this.renderErrors()}</div>
-
-          <form onSubmit={this.handleSubmit}>
-              <div className="form-fields">
-                <input type="text" value={this.state.email_address}
-                  placeholder="Email Address"
-                  onChange={this.handleInputChange('emailAddress')} />
-                <div className="icon"><FontAwesomeIcon icon={"envelope"} /></div>
+          <div className="session-form">
+            <div className="form-content">
+              <div className="form-top">
+                <Link to="/"><span className="modal-close">&times;</span></Link>
+                <h3>{header}</h3>
               </div>
-              <div className="form-fields">
-                <input type="password" value={this.state.password}
-                  placeholder="Password"
-                  onChange={this.handleInputChange('password')} />
-                <div className="icon"><FontAwesomeIcon icon={"lock"} /></div>
+
+              <div className="error-messages">{this.renderErrors()}</div>
+
+              <form onSubmit={this.handleSubmit}>
+                <div className="form-fields">
+                  <input type="text" value={this.state.email_address}
+                    placeholder="Email Address"
+                    onChange={this.handleInputChange('emailAddress')} />
+                  <div className="icon"><FontAwesomeIcon icon={"envelope"} /></div>
+                </div>
+                <div className="form-fields">
+                  <input type="password" value={this.state.password}
+                    placeholder="Password"
+                    onChange={this.handleInputChange('password')} />
+                  <div className="icon"><FontAwesomeIcon icon={"lock"} /></div>
+                </div>
+                <div className="form-button"><input className="form-submit" type="submit" value={header} /></div>
+              </form>
+              <div className="alt-session">
+                <Link to={sessionPath}>{altSessionMessage}
+                  <span>{sessionLink}</span></Link>
+                </div>
               </div>
-              <div className="form-button"><input className="form-submit" type="submit" value={header} /></div>
-          </form>
-          <div className="alt-session">
-            <Link to={sessionPath}>{altSessionMessage}
-              <span>{sessionLink}</span></Link>
+              <Link to="/"><div className="lightbox"></div></Link>
           </div>
-        </div>
-        <Link to="/"><div className="lightbox"></div></Link>
       </React.Fragment>
     );
     }
