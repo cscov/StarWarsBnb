@@ -6,8 +6,8 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      emailAddress: "",
+      first_name: "",
+      email_address: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -61,15 +61,15 @@ class SessionForm extends React.Component {
 
               <form onSubmit={this.handleSubmit}>
                 <div className="form-fields">
-                  <input type="text" value={this.state.firstName}
+                  <input type="text" value={this.state.first_name}
                     placeholder="First Name"
-                    onChange={this.handleInputChange('firstName')} />
+                    onChange={this.handleInputChange('first_name')} />
                   <div className="icon"><FontAwesomeIcon icon={"user"} /></div>
                 </div>
                 <div className="form-fields">
-                  <input type="text" value={this.state.emailAddress}
+                  <input type="text" value={this.state.email_address}
                     placeholder="Email Address"
-                    onChange={this.handleInputChange('emailAddress')} />
+                    onChange={this.handleInputChange('email_address')} />
                   <div className="icon"><FontAwesomeIcon icon={"envelope"} /></div>
                 </div>
                 <div className="form-fields">
@@ -107,9 +107,9 @@ class SessionForm extends React.Component {
 
               <form onSubmit={this.handleSubmit}>
                 <div className="form-fields">
-                  <input type="text" value={this.state.emailAddress}
+                  <input type="text" value={this.state.email_address}
                     placeholder="Email Address"
-                    onChange={this.handleInputChange('emailAddress')} />
+                    onChange={this.handleInputChange('email_address')} />
                   <div className="icon"><FontAwesomeIcon icon={"envelope"} /></div>
                 </div>
                 <div className="form-fields">
