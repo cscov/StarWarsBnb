@@ -1,6 +1,6 @@
 class Api::SpotsController < ApplicationController
   def show
-    @spot = Spot.find(params[:id])
+    @spot = Spot.includes([:photos], :host).find(params[:id])
 
   end
 
