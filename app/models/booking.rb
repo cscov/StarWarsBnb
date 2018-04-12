@@ -12,4 +12,8 @@ class Booking < ApplicationRecord
              class_name: :Spot,
              primary_key: :id,
              foreign_key: :spot_id
+
+  has_one :host,
+          through: :spot,
+          source: :host
 end

@@ -27,10 +27,14 @@ class User < ApplicationRecord
   has_many :spots,
            class_name: :Spot
 
-  has_many :bookings,
+  has_many :trips,
            class_name: :Booking,
            primary_key: :id,
            foreign_key: :traveler_id
+
+  has_many :bookings,
+           through: :spots,
+           source: :bookings
 
 
   def reset_session_token!
