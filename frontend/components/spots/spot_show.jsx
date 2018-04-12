@@ -24,34 +24,44 @@ class SpotShow extends React.Component {
     }
   }
 
+
   render() {
     const {spot} = this.props;
     if (!spot) {
       return null;
     }
+    let firstAmenities = spot.amenitiesIncluded.slice(5);
+    firstAmenities = firstAmenities.map( amenity => amenity.split("_").join(" "));
+    const sixAmenities = firstAmenities.map( (amenity, idx) => {
+      return (<li className="truncated" key={`amenity-${idx}`}>
+        <span className="icon"><FontAwesomeIcon icon={["fab", "rebel"]} /></span>
+        <span className="item">{amenity}</span>
+      </li>);
+    });
     const photos = spot.spotPhotoUrls;
-    console.log(`photos is: ${photos}`);
     return (
-      <div className="spot-details">
       <React.Fragment>
         <ul className="photo-carousel">
-
+          <li><img src={photos[0]}/></li>
         </ul>
-        <section className="book">
-          <span id="from">From</span><br />
-          <span className="daily-rate">${spot.dailyRate}</span>
-          <span id="per-night"> per night</span><br />
-          <div className="rating">
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <span id="small-reviews">{spot.numReviews}</span>
-          </div>
-          <form className="booking-form">
-          </form>
-        </section>
+        <div className="book-container">
+          <section className="book">
+            <span id="from">From</span><br />
+            <span className="daily-rate">${spot.dailyRate}</span>
+            <span id="per-night"> per night</span><br />
+            <div className="rating">
+              <FontAwesomeIcon icon={["fas", "star"]} />
+              <FontAwesomeIcon icon={["fas", "star"]} />
+              <FontAwesomeIcon icon={["fas", "star"]} />
+              <FontAwesomeIcon icon={["fas", "star"]} />
+              <FontAwesomeIcon icon={["fas", "star"]} />
+              <span id="small-reviews">{spot.numReviews}</span>
+            </div>
+            <form className="booking-form">
+            </form>
+          </section>
+        </div>
+      <div className="spot-details">
         <section className="details">
           <span className="filter rental-type">
             {spot.rentalType}
@@ -89,13 +99,19 @@ class SpotShow extends React.Component {
             </section>
           </section>
         </section>
-        <section className="hosted-by">
-          <img src={spot.avatar} />
-          <span className="host">Hosted by {spot.firstName}</span>
+        <section className="home-description">
+          <section className="hosted-by">
+            <img src={spot.avatar} />
+            <span className="host">Hosted by {spot.firstName}</span>
+          </section>
+          <p className="description">{spot.description}</p>
         </section>
-        <p className="description">{spot.description}</p>
         <section className="amenities">
           <h3 className="section-title">Amenities</h3>
+          <ul className="amenity-slice">
+            {sixAmenities}
+          </ul>
+          <p className="button-link">Show all 28 amenities</p>
           <section className="amenities-modal">
             <section className="basic-amenity-category">
               <h3>Basic</h3>
@@ -141,8 +157,9 @@ class SpotShow extends React.Component {
             </section>
           </section>
         </section>
+        <h3 className="section-title">Sleeping arrangements</h3>
         <section className="sleeping">
-          <h3 className="section-title">Sleeping arrangements</h3>
+          <span className="icon fa-2x"><FontAwesomeIcon icon={["fas", "bed"]} /></span>
           <span>{spot.sleepingArrangements}</span>
         </section>
         <section className="rules">
@@ -157,10 +174,12 @@ class SpotShow extends React.Component {
           <h2>{spot.numReviews} Reviews</h2>
         </section>
         <section className="map-area">
+          <h4 className="section-title">Getting around</h4>
           <p className="getting-around">{spot.gettingAround}</p>
           <section id="map"></section>
         </section>
-      </React.Fragment></div>
+      </div>
+      </React.Fragment>
     );
   }
 }

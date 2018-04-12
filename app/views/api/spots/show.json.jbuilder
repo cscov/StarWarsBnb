@@ -1,7 +1,7 @@
 json.spot do
 
 
-    json.extract! @spot, :id, :spot_photo_urls, :rental_type, :planet, :title, :num_guests, :num_bedrooms, :num_beds,
+    json.extract! @spot, :id, :amenities_included, :amenities_not_included, :spot_photo_urls, :rental_type, :planet, :title, :num_guests, :num_bedrooms, :num_beds,
     :num_baths, :description, :basic_amenity_category,
     :wifi, :indoor_fireplace, :tv, :iron, :essentials, :heating,
     :air_conditioning, :hot_water, :facilities_amenity_category,

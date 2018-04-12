@@ -93,8 +93,26 @@ class Spot < ApplicationRecord
   :carbon_monoxide_detector, :smoke_detector, :first_aid_kit,
   :not_included_amenity_category, :washer, :private_entrance, in: [true, false]
 
-  def amenities
-    self.columns.select{ |c| c.type == :boolean }
+
+  def self.amenities_minus_category
+     all_categories = self.columns.select{ |c| c.type == :boolean }.map(&:name)
+     all_categories.reject!{ |name| name.include?('category') }
   end
+
+  def self.amenity_categories
+    all_categories = self.columns.select{ |c| c.type == :boolean }.map(&:name)
+    all_categories.select!{ |name| name.include?('category') }
+  end
+
+  def amenities_not_included
+    all_amenities = Spot.amenities_minus_category
+    all_amenities.select!{ |amenity| self[amenity] == false }
+  end
+
+  def amenities_included
+    all_amenities = Spot.amenities_minus_category
+    all_amenities.select!{ |amenity| self[amenity] == true }
+  end
+
 
 end

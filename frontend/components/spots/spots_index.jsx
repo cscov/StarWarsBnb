@@ -21,7 +21,7 @@ class SpotsIndex extends React.Component {
     return (
       <div className="index">
         <Route path='/rooms/:roomId' component={SpotShow} />
-        <h2>Homes across the galaxy</h2>
+        <h2>Explore StarWarsBnb homes across the galaxy</h2>
         <ul className="index-list">
           {spots}
         </ul>
