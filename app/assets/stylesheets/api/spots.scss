@@ -113,7 +113,7 @@ $divider: 1px solid $airBnbBorderColor;
     margin-bottom: 3em;
 
     li {
-      height: 505px;
+      height: 75vh;
       overflow-y: hidden;
     }
   }
@@ -131,7 +131,7 @@ $divider: 1px solid $airBnbBorderColor;
       z-index: 3;
       background-color: #fff;
       width: 30%;
-      top: 38em;
+      top: 50em;
       height: 15%;
 
       #from, #per-night {
@@ -163,7 +163,7 @@ $divider: 1px solid $airBnbBorderColor;
   .spot-details {
     width: 67%;
     position: relative;
-    margin-left: 6%;
+    margin: 0 auto;
 
 
     .details {
