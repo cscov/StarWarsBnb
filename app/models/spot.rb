@@ -69,6 +69,11 @@ class Spot < ApplicationRecord
   through: :spot_photos,
   source: :photo
 
+  has_many :bookings,
+           class_name: :Booking,
+           primary_key: :id,
+           foreign_key: :spot_id
+
   def spot_first_photo
     self.photos.first.url
   end

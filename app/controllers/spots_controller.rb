@@ -1,4 +1,0 @@
-class ASpotsController < ApplicationController
-
-
-end

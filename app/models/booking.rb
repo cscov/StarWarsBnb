@@ -7,4 +7,9 @@ class Booking < ApplicationRecord
              class_name: :User,
              primary_key: :id,
              foreign_key: :traveler_id
+
+  belongs_to :spot,
+             class_name: :Spot,
+             primary_key: :id,
+             foreign_key: :spot_id
 end
