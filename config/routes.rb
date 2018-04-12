@@ -6,7 +6,7 @@ Rails.application.routes.draw do
      resources :spots, only: [:index, :show] do
        resources :photos, only: [:show]
      end
-     resources :bookings, only: [:update]
+     resources :bookings, only: [:show, :create, :update, :edit, :destroy]
    end
    root to: 'static_pages#root'
 
