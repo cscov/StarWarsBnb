@@ -1,5 +1,10 @@
 class Api::BookingsController < ApplicationController
 
+  def index
+    @bookings = Booking.where(traveler_id: current_user.id)
+    render :index
+  end
+
   def create
     @booking = Booking.new(booking_params)
     if @booking.save

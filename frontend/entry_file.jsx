@@ -4,7 +4,8 @@ import { signup, login, logout } from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
 import { toggleModal } from './actions/modal_actions';
-import {fetchAllSpots, fetchSpot } from './util/spots_api_util';
+import { fetchAllSpots, fetchSpot } from './util/spots_api_util';
+import { fetchTrips } from './util/booking_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('root');
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.toggleModal = toggleModal;
   window.fetchAllSpots = fetchAllSpots;
   window.fetchSpot = fetchSpot;
+  window.fetchTrips = fetchTrips;
   // TESTING END
 
   ReactDOM.render(<Root store={store} />, rootEl);
