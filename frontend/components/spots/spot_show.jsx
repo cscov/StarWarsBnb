@@ -111,7 +111,6 @@ class SpotShow extends React.Component {
           <ul className="amenity-slice">
             {sixAmenities}
           </ul>
-          <p className="button-link">Show all 28 amenities</p>
           <section className="amenities-modal">
             <section className="basic-amenity-category">
               <h3>Basic</h3>
@@ -170,16 +169,7 @@ class SpotShow extends React.Component {
           <h3 className="section-title">Cancellations</h3>
           <p className="policy">{spot.cancellationPolicy}</p>
         </section>
-        <section className="reviews">
-          <h2>{spot.numReviews} Reviews</h2>
-          <span>
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <FontAwesomeIcon icon={["fas", "star"]} />
-            <FontAwesomeIcon icon={["fas", "star"]} />
-          </span>
-        </section>
+        
         <section className="map-area">
           <h4 className="section-title">Getting around</h4>
           <p className="getting-around">{spot.gettingAround}</p>

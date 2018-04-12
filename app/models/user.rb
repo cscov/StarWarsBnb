@@ -25,7 +25,12 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_many :spots,
-  class_name: :Spot
+           class_name: :Spot
+
+  has_many :bookings,
+           class_name: :Booking,
+           primary_key: :id,
+           foreign_key: :traveler_id
 
 
   def reset_session_token!

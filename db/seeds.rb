@@ -105,7 +105,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 sleeping_arrangements: "1 queen bed and 1 twin bed",
                 house_rules: "Just take off your shoes in the
                 house and clean up after yourself",
-                cancellation_policy: "Strict
+                cancellation_policy: "Strict.
                 Cancel up to 7 days before check in and get a 50%
                 refund (minus service fees). Cancel within 7 days
                 of your trip and the reservation is non-refundable.
@@ -160,7 +160,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 sleeping_arrangements: "1 queen bed",
                 house_rules: "I don't plan on coming back here so
                 do what you want with it.",
-                cancellation_policy: "Flexible cancellation policy
+                cancellation_policy: "Flexible cancellation policy.
                 Cancel up to 24 hours before check in and get a full
                 refund (minus service fees). Cancel within 24 hours
                 of your trip and the first night is non-refundable.
@@ -218,7 +218,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 house_rules: "Please take off your shoes in the
                 house and clean up after yourself, we work hard
                 to keep the place clean",
-                cancellation_policy: "Strict
+                cancellation_policy: "Strict.
                 Cancel up to 7 days before check in and get a 50%
                 refund (minus service fees). Cancel within 7
                 days of your trip and the reservation is
@@ -263,7 +263,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 dining_amenity_category: true,
                 kitchen: true,
                 guest_access_amenity_category: true,
-                lockbox: true,
+                lockbox: false,
                 bed_bath_amenity_category: true,
                 hangers: true,
                 hair_dryer: true,
@@ -274,12 +274,12 @@ spot1 = Spot.create!({ host_id: host1.id,
                 smoke_detector: true,
                 first_aid_kit: true,
                 not_included_amenity_category: false,
-                washer: true,
-                private_entrance: true,
+                washer: false,
+                private_entrance: false,
                 sleeping_arrangements: "3 king beds",
                 house_rules: "If you can dream it, you can do it!
                 That's why my casino is the best.",
-                cancellation_policy: "Strict
+                cancellation_policy: "Strict.
                 Cancel up to 7 days before check in and get a 50%
                 refund (minus service fees). Cancel within 7
                 days of your trip and the reservation is non-refundable.
@@ -337,7 +337,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 sleeping_arrangements: "1 queen bed and 2 hammocks",
                 house_rules: "Please bank the fire before you go
                 to sleep at night and rekindle it in the morning.",
-                cancellation_policy: "Flexible cancellation policy
+                cancellation_policy: "Flexible cancellation policy.
                 Cancel up to 24 hours before check in and get a full
                 refund (minus service fees). Cancel within 24 hours
                 of your trip and the first night is non-refundable.
@@ -394,16 +394,16 @@ spot1 = Spot.create!({ host_id: host1.id,
                 washer: true,
                 private_entrance: false,
                 sleeping_arrangements: "1 queen bed and 1 twin bed",
-                house_rules: "Just take off your shoes in the house
-                and clean up after yourself",
-                cancellation_policy: "Strict
+                house_rules: "Try to keep sand out of the room, and throw
+                away any uneaten food when you leave.",
+                cancellation_policy: "Strict.
                 Cancel up to 7 days before check in and get a 50% refund
                 (minus service fees). Cancel within 7 days of your
                 trip and the reservation is non-refundable. Service
                 fees are refunded when cancellation happens before
                 check in and within 48 hours of booking.",
-                getting_around: "We usually ride banthas, but if
-                you get lucky you could rent a podracer",
+                getting_around: "Military-grade shuttles are available to
+                rent.",
                 address: "23 Dune Lane, Mos Eisley, Tatooine",
                 directions: "Just head west from the spaceport",
                 house_manual: "No parties. Quiet hours start at 10PM",
@@ -451,7 +451,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 sleeping_arrangements: "2 twin beds",
                 house_rules: "Please do not make extra work for the
                 Caretakers and be respectful of the island.",
-                cancellation_policy: "Strict
+                cancellation_policy: "Strict.
                 Cancel up to 7 days before check in and get a 50% refund
                 (minus service fees). Cancel within 7 days of your
                 trip and the reservation is non-refundable. Service
@@ -480,19 +480,19 @@ spot1 = Spot.create!({ host_id: host1.id,
                 basic_amenity_category: true,
                 wifi: true,
                 indoor_fireplace: true,
-                tv: true,
+                tv: false,
                 iron: true,
                 essentials: true,
                 heating: true,
                 air_conditioning: true,
                 hot_water: true,
                 facilities_amenity_category: true,
-                parking: true,
+                parking: false,
                 hot_tub: true,
                 dining_amenity_category: true,
                 kitchen: true,
                 guest_access_amenity_category: true,
-                lockbox: true,
+                lockbox: false,
                 bed_bath_amenity_category: true,
                 hangers: true,
                 hair_dryer: true,
@@ -506,7 +506,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 washer: true,
                 private_entrance: true,
                 sleeping_arrangements: "3 king beds",
-                cancellation_policy: "Strict
+                cancellation_policy: "Strict.
                 Cancel up to 7 days before check in and get a 50% refund
                 (minus service fees). Cancel within 7 days of your
                 trip and the reservation is non-refundable. Service
