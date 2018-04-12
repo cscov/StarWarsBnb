@@ -96,7 +96,7 @@ $divider: 1px solid $airBnbBorderColor;
 
   // show page
   .truncated {
-    color: $airBnbGray;
+    color: $airBnbLightGray;
     font-weight: 300;
 
     .item {
@@ -257,7 +257,7 @@ $divider: 1px solid $airBnbBorderColor;
       font-weight: 500;
       padding-left: 0em;
       color: $airBnbGray;
-      padding-top: 0em;
+      padding-top: 1em;
     }
 
     .sleeping {
@@ -270,8 +270,9 @@ $divider: 1px solid $airBnbBorderColor;
       font-weight: 300;
       padding: 2em;
 
-      .sleeping:last-child {
+      .sleeping-description {
         margin-top: 1em;
+        text-align: center;
       }
 
     }
@@ -285,6 +286,7 @@ $divider: 1px solid $airBnbBorderColor;
 
       .house-rules {
         font-weight: 300;
+        color: $airBnbLightGray;
       }
     }
 
@@ -295,12 +297,22 @@ $divider: 1px solid $airBnbBorderColor;
 
       .policy {
         font-weight: 300;
+        color: $airBnbLightGray;
       }
     }
 
     .reviews {
-      color: $airBnbGray;
+      color: #484848;
       margin-top: 2em;
+      display: flex;
+      align-items: baseline;
+
+      span {
+        @extend .rating;
+        color: $airBnbTeal;
+        margin-left: 1em;
+
+      }
     }
 
     h4 {
@@ -311,6 +323,7 @@ $divider: 1px solid $airBnbBorderColor;
     .getting-around {
       font-weight: 300;
       padding-bottom: 2em;
+      color: $airBnbLightGray;
     }
   }
 }

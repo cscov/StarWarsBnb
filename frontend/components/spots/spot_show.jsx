@@ -160,7 +160,7 @@ class SpotShow extends React.Component {
         <h3 className="section-title">Sleeping arrangements</h3>
         <section className="sleeping">
           <span className="icon fa-2x"><FontAwesomeIcon icon={["fas", "bed"]} /></span>
-          <span>{spot.sleepingArrangements}</span>
+          <span className="sleeping-description">{spot.sleepingArrangements}</span>
         </section>
         <section className="rules">
           <h3 className="section-title">House Rules</h3>
@@ -172,6 +172,13 @@ class SpotShow extends React.Component {
         </section>
         <section className="reviews">
           <h2>{spot.numReviews} Reviews</h2>
+          <span>
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <FontAwesomeIcon icon={["fas", "star"]} />
+            <FontAwesomeIcon icon={["fas", "star"]} />
+          </span>
         </section>
         <section className="map-area">
           <h4 className="section-title">Getting around</h4>
