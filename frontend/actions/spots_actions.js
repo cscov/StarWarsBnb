@@ -22,7 +22,9 @@ export const fetchAllSpots = () => dispatch => (
   SpotsAPIUtil.fetchAllSpots().then( spots => dispatch(receiveAllSpots(spots)))
 );
 
-export const fetchSpot = id => dispatch => {
+export const fetchSpot = (id) => (dispatch) => {
   dispatch(loadUpSpot());
-  return SpotsAPIUtil.fetchSpot(id).then( spot => dispatch(receiveSpot(spot)));
+  return SpotsAPIUtil.fetchSpot(id).then( spot => { dispatch(receiveSpot(spot));
+    return spot;
+  });
 };

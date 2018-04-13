@@ -7,11 +7,11 @@ import faBed from '@fortawesome/fontawesome-free-solid/faBed';
 import faCouch from '@fortawesome/fontawesome-free-solid/faCouch';
 import faBath from '@fortawesome/fontawesome-free-solid/faBath';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import LoadingIcon from './loading_icon';
 
 class SpotShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.spot;
   }
 
   componentDidMount() {
@@ -26,13 +26,17 @@ class SpotShow extends React.Component {
 
 
   render() {
-    const {spot} = this.props;
-    if (!spot) {
+    const {spot, loading} = this.props;
+
+    if (loading) {
+      return <div className="loading-icon"><LoadingIcon /></div>;
+    }
+
+    if(!spot.hasOwnProperty('wifi') || !spot) {
       return null;
     }
-    let firstAmenities = spot.amenitiesIncluded.slice(5);
-    firstAmenities = firstAmenities.map( amenity => amenity.split("_").join(" "));
-    const sixAmenities = firstAmenities.map( (amenity, idx) => {
+
+    const sixAmenities = spot.firstSixAment.map( (amenity, idx) => {
       return (<li className="truncated" key={`amenity-${idx}`}>
         <span className="icon"><FontAwesomeIcon icon={["fab", "rebel"]} /></span>
         <span className="item">{amenity}</span>
@@ -169,7 +173,7 @@ class SpotShow extends React.Component {
           <h3 className="section-title">Cancellations</h3>
           <p className="policy">{spot.cancellationPolicy}</p>
         </section>
-        
+
         <section className="map-area">
           <h4 className="section-title">Getting around</h4>
           <p className="getting-around">{spot.gettingAround}</p>

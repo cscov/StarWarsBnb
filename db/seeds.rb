@@ -582,4 +582,4 @@ achspotphoto3 = SpotPhoto.create!({ photo_id: achto3.id, spot_id: spot7.id })
 booking1 = Booking.create!(spot_id: spot1.id, reservation_code: "DKF4IRR0",
                            traveler_id: host8.id, check_in: DateTime.civil(2018, 10, 4, 16, 0, 0),
                            check_out: DateTime.civil(2018, 12, 4, 11, 0, 0),
-                           total_cost: 40, num_guests: 1)
+                           total_cost: 40, num_guests: 1, trip_status: "Accepted")

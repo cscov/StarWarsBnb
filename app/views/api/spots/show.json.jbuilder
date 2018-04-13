@@ -10,6 +10,6 @@ json.spot do
     :shampoo, :safety_amenity_category, :fire_extinguisher, :carbon_monoxide_detector,
     :smoke_detector, :first_aid_kit, :not_included_amenity_category,
     :washer, :private_entrance, :sleeping_arrangements, :house_rules,
-    :cancellation_policy, :getting_around, :num_reviews, :daily_rate
+    :cancellation_policy, :getting_around, :num_reviews, :daily_rate, :first_six_ament
     json.extract! @spot.host, :first_name, :avatar
   end
