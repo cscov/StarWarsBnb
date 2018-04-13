@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
-const newSession = (currentUser, logout) => (
-  <div>
+const newSession = (currentUser, logout, openTripsModal) => (
+  <div className="new-session">
+    <button className="session-links" id="trips" onClick={openTripsModal}>Trips</button>
     <button onClick={logout}>Log Out</button>
   </div>
 );

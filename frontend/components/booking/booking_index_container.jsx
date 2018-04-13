@@ -6,6 +6,7 @@ import BookingIndex from './booking_index';
 
 const mapStateToProps = state => ({
   trips: state.entities.bookings,
+  
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

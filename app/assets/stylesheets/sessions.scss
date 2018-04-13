@@ -76,6 +76,17 @@ nav input {
 .right-nav {
   margin-right: 5%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.new-session {
+  display: flex;
+}
+
+.trips {
+  display: flex;
+  margin-right: 2em;
 }
 
 .right-nav a, button {
@@ -91,6 +102,7 @@ nav input {
   border-bottom: 2px solid transparent;
   align-items: center;
   height: 100%;
+  cursor: pointer;
 }
 
 .lightbox {
