@@ -17,17 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  // TESTING START
-  window.signup = signup;
-  window.login = login;
-  window.logout = logout;
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.toggleModal = toggleModal;
-  window.fetchAllSpots = fetchAllSpots;
-  window.fetchSpot = fetchSpot;
-  window.fetchTrips = fetchTrips;
-  // TESTING END
 
   ReactDOM.render(<Root store={store} />, rootEl);
 });

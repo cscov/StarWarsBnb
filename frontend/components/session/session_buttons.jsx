@@ -4,7 +4,6 @@ import TripButton from '../booking/trip_button';
 
 const newSession = (currentUser, logout) => (
   <div className="new-session">
-    <div className="session-links" id="trips"><TripButton /></div>
     <button onClick={logout}>Log Out</button>
   </div>
 );
