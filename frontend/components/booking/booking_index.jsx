@@ -9,7 +9,7 @@ class BookingIndex extends React.Component {
   componentDidMount() {
     if (this.props.currentUser) {
       this.props.fetchBookings(this.props.currentUser.id);
-      console.log(this.props);
+      ""(this.props);
     }
   }
 

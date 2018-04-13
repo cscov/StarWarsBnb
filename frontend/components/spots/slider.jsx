@@ -14,7 +14,7 @@ class SimpleSlider extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
-    console.log(`this.props is: ${this.props}`);
+    ""(`this.props is: ${this.props}`);
     const photoUrls = this.props;
     let images = photoUrls.map (url => {
       return ( <img src={`${url}`} /> );

@@ -17,6 +17,7 @@ class BookingShow extends React.Component {
   }
 
   render() {
+
     const {trip, currentUser} = this.props;
     return (
       <React.Fragment>

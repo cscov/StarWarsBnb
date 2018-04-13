@@ -8,10 +8,13 @@ import faCouch from '@fortawesome/fontawesome-free-solid/faCouch';
 import faBath from '@fortawesome/fontawesome-free-solid/faBath';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import LoadingIcon from './loading_icon';
+import 'react-dates/initialize';
+import  {DateRangePicker}  from 'react-dates';
 
 class SpotShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {startDate: null, endDate: null, focusedInput: null};
   }
 
   componentDidMount() {
@@ -32,9 +35,8 @@ class SpotShow extends React.Component {
       return <div className="loading-icon"><LoadingIcon /></div>;
     }
 
-    if(!spot.hasOwnProperty('wifi') || !spot) {
-      return null;
-    }
+    if( spot && spot.hasOwnProperty('wifi')) {
+
 
     const sixAmenities = spot.firstSixAment.map( (amenity, idx) => {
       return (<li className="truncated" key={`amenity-${idx}`}>
@@ -62,6 +64,10 @@ class SpotShow extends React.Component {
               <span id="small-reviews">{spot.numReviews}</span>
             </div>
             <form className="booking-form">
+              <span id="dates">Dates</span>
+                
+              <span id="guests">Guests</span>
+              <input type="submit" value="Book" />
             </form>
           </section>
         </div>
@@ -182,6 +188,9 @@ class SpotShow extends React.Component {
       </div>
       </React.Fragment>
     );
+  } else {
+    return <div>Loading</div>;
+  }
   }
 }
 export default SpotShow;

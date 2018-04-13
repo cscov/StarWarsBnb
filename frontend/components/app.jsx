@@ -18,6 +18,8 @@ import SpotsIndexContainer from './spots/spots_index_container';
 import SpotShowContainer from './spots/spot_show_container';
 import BookingShowContainer from './booking/booking_show_container';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+import 'react-dates/initialize';
+
 
 
 fontawesome.library.add(brands, regular, solid, faRebel, faEnvelope,
