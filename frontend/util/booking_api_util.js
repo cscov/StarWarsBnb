@@ -4,3 +4,10 @@ export const fetchTrips = (id) => (
     method: 'GET'
   })
 );
+
+export const fetchTrip = (userId, tripId) => (
+  $.ajax({
+    url: `api/users/${userId}/bookings/${tripId}`,
+    method: 'GET',
+  })
+);
