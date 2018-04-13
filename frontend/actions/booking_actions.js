@@ -8,9 +8,9 @@ const receiveBookings = bookings => ({
   bookings
 });
 
-export const fetchBookings = () => dispatch => {
+export const fetchBookings = (id) => dispatch => {
   dispatch(openTripsModal());
-  return APIBookingUtil.fetchBookings().then( bookings => { dispatch(receiveBookings(bookings));
+  return APIBookingUtil.fetchTrips(id).then( bookings => { dispatch(receiveBookings(bookings));
     return bookings;
   });
 };

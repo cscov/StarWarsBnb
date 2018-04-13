@@ -84,9 +84,10 @@ nav input {
   display: flex;
 }
 
-.trips {
+#trips {
   display: flex;
   margin-right: 2em;
+  background-color: transparent;
 }
 
 .right-nav a, button {

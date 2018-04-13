@@ -2,15 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { fetchBookings } from '../../actions/booking_actions';
-import BookingIndex from './booking_index';
+import TripsButton from './trips_button';
 
 const mapStateToProps = state => ({
-  trips: state.entities.bookings,
-  
+  trips: Object.values(state.entities.bookings),
+  modalOpen: state.ui.modal.tripModal,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  fetchBookings: bookings => dispatch(fetchBookings(bookings))
+  fetchBookings: (id) => dispatch(fetchBookings(id))
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BookingIndex));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TripsButton));

@@ -7,11 +7,17 @@ class BookingIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBookings();
+    if (this.props.currentUser) {
+      this.props.fetchBookings(this.props.currentUser.id);
+      console.log(this.props);
+    }
   }
 
   render() {
-    const trips = this.props;
+    if (!this.props.show) {
+      return null;
+    }
+    const {trips, onClose} = this.props;
     trips.map( (trip, idx) => {
       return (
         <BookingIndexItem key={`trip-${idx}`} trip={trip}/>
@@ -27,6 +33,7 @@ class BookingIndex extends React.Component {
             {trips}
           </ul>
         </div>
+        <div className="background" onClick={this.props.onClose}></div>
       </React.Fragment>
     );
   }

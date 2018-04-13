@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import TripButton from '../booking/trip_button';
 
-const newSession = (currentUser, logout, openTripsModal) => (
+const newSession = (currentUser, logout) => (
   <div className="new-session">
-    <button className="session-links" id="trips" onClick={openTripsModal}>Trips</button>
+    <div className="session-links" id="trips"><TripButton /></div>
     <button onClick={logout}>Log Out</button>
   </div>
 );
