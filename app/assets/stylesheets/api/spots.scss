@@ -130,7 +130,8 @@ $divider: 1px solid $airBnbBorderColor;
       z-index: 3;
       background-color: #fff;
       width: 30%;
-      top: 50em;
+      bottem: 3em;
+      position: relative;
       height: 15%;
 
       #from, #per-night {
