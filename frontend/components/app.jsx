@@ -16,6 +16,7 @@ import faUser from '@fortawesome/fontawesome-free-regular/faUser';
 import faLock from '@fortawesome/fontawesome-free-solid/faLock';
 import SpotsIndexContainer from './spots/spots_index_container';
 import SpotShowContainer from './spots/spot_show_container';
+import BookingShowContainer from './booking/booking_show_container';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
 
 
@@ -45,6 +46,7 @@ const App = () => (
           <AuthRoute path='/signup' component={SignupFormContainer} />
           <AuthRoute path='/login' component={LoginFormContainer} />
           <ProtectedRoute path='/rooms/:roomId' component={SpotShowContainer} />
+          <ProtectedRoute path='/trips/:tripId' component={BookingShowContainer} />
           <Route path="/rooms" component={SpotsIndexContainer} />
           <Redirect to='/rooms'/>
         </Switch>

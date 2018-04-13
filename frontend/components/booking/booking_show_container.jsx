@@ -4,7 +4,8 @@ import BookingShow from './booking_show';
 import { fetchBooking } from '../../actions/booking_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  trip: state.entities.bookings[ownProps.match.params.tripId]
+  trip: state.entities.bookings[ownProps.match.params.tripId],
+  userId: state.session.currentUser.id
 });
 
 const mapDispatchToProps = dispatch => ({
