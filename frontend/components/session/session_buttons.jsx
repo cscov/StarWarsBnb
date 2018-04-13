@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import TripButton from '../booking/trip_button';
 
 const newSession = (currentUser, logout) => (
   <div className="new-session">
