@@ -1,0 +1,12 @@
+$airBnbBorderColor: #DBDBDB;
+$divider: 1px solid $airBnbBorderColor;
+
+address {
+  display: flex;
+  justify-content: center;
+  border-top: $divider;
+
+  span {
+    margin: 1em;
+  }
+}
