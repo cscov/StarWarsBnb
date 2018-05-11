@@ -11,7 +11,7 @@ import brands from '@fortawesome/fontawesome-free-brands';
 import regular from '@fortawesome/fontawesome-free-regular';
 import solid from '@fortawesome/fontawesome-free-solid';
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub';
-import faLinkedInIn from '@fortawesome/fontawesome-free-brands/faLinkedInIn';
+import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin';
 import faRebel from '@fortawesome/fontawesome-free-brands/faRebel';
 import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
 import faUser from '@fortawesome/fontawesome-free-regular/faUser';
@@ -53,11 +53,11 @@ const App = () => (
           <Redirect to='/rooms'/>
         </Switch>
         <address>
-          <span id="github" className="theme-pink">
+          <span id="github" className="theme-light-gray fa-2x">
             <a href="https://github.com/cscov/StarWarsBnb"><FontAwesomeIcon icon={["fab", "github"]} /></a>
           </span>
-          <span id="linkedin" className="theme-pink">
-            <a href="https://www.linkedin.com/in/carolynscoville/"><FontAwesomeIcon icon={["fab", "linkedin-in"]} /></a>
+          <span id="linkedin" className="theme-light-gray fa-2x">
+            <a href="https://www.linkedin.com/in/carolynscoville/"><FontAwesomeIcon icon={["fab", "linkedin"]} /></a>
           </span>
         </address>
       </div>
