@@ -5,6 +5,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SessionButtonsContainer from './session/session_button_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
+import Splash from './session/splash';
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
@@ -20,6 +21,9 @@ import SpotsIndexContainer from './spots/spots_index_container';
 import SpotShowContainer from './spots/spot_show_container';
 import BookingShowContainer from './booking/booking_show_container';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+import { demoLogin } from '../actions/session_actions';
+import { fetchSpot } from '../actions/spots_actions';
+import configureStore from '../store/store';
 
 
 fontawesome.library.add(brands, regular, solid, faRebel, faEnvelope,
@@ -48,16 +52,21 @@ const App = () => (
           <AuthRoute path='/signup' component={SignupFormContainer} />
           <AuthRoute path='/login' component={LoginFormContainer} />
           <ProtectedRoute path='/rooms/:roomId' component={SpotShowContainer} />
-          <ProtectedRoute path='/trips/:tripId' component={BookingShowContainer} />
-          <Route path="/rooms" component={SpotsIndexContainer} />
-          <Redirect to='/rooms'/>
+          <ProtectedRoute path='/trips/:tripId'
+                          component={BookingShowContainer} />
+          <ProtectedRoute path="/rooms" component={SpotsIndexContainer} />
+          <AuthRoute exact={true} path='/' component={Splash} />
         </Switch>
         <address>
           <span id="github" className="theme-light-gray fa-2x">
-            <a href="https://github.com/cscov/StarWarsBnb"><FontAwesomeIcon icon={["fab", "github"]} /></a>
+            <a href="https://github.com/cscov/StarWarsBnb">
+              <FontAwesomeIcon icon={["fab", "github"]} />
+            </a>
           </span>
           <span id="linkedin" className="theme-light-gray fa-2x">
-            <a href="https://www.linkedin.com/in/carolynscoville/"><FontAwesomeIcon icon={["fab", "linkedin"]} /></a>
+            <a href="https://www.linkedin.com/in/carolynscoville/">
+              <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            </a>
           </span>
         </address>
       </div>

@@ -4,7 +4,8 @@ import { fetchAllSpots, fetchSpot } from '../../actions/spots_actions';
 import SpotsIndex from './spots_index';
 
 const mapStateToProps = state => ({
-  spots: Object.values(state.entities.spots)
+  spots: Object.values(state.entities.spots),
+  loading: state.ui.loading.allSpotsLoading,
 });
 
 const mapDispatchToProps = dispatch => ({
