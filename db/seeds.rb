@@ -19,19 +19,19 @@ host1 = User.create!({ password: 123456, email_address: 'cscovdarth',
 host2 = User.create!({ password: 123456, email_address: 'cscovhan',
   first_name: 'Han', planet: 'Corellia',
   verified: false, bio: "Smuggler with a heart of gold",
-  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253162/han.png",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_70/v1526850758/han.png",
   phone_number: "(123) 456-8901", superhost: false })
 
 host3 = User.create!({ password: 123456, email_address: 'cscovjyn',
   first_name: 'Jyn', planet: "La'Mu", verified: false,
   bio: "Just a rebel",
-  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253133/jyn-erso_1.jpg",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_70/v1526850759/jyn-erso_1.jpg",
   phone_number: "(123) 456-2345", superhost: false })
 
 host4 = User.create!({ password: 123456, email_address: 'cscovLando',
   first_name: 'Lando', planet: "Socorro", verified: false,
   bio: "I'm an entrepreneur. Let's make a deal",
-  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253127/Lando_WoSW.jpg",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_70/v1526850758/Lando_WoSW.jpg",
   phone_number: "(123) 456-7234", superhost: false })
 
 host5 = User.create!({ password: 123456, email_address: 'cscovobi',
@@ -39,26 +39,26 @@ host5 = User.create!({ password: 123456, email_address: 'cscovobi',
   verified: false,
   bio: "I will return more powerful than you can
   possibly imagine",
-  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253161/obi_wan.jpg",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_70/v1526850759/obi_wan.jpg",
   phone_number: "(123) 456-8346", superhost: false })
 
 host6 = User.create!({ password: 123456, email_address: 'cscovpoe',
   first_name: 'Poe', planet: 'Yavin IV',
   verified: false, bio: "Rebel. The best pilot
   you've ever seen with the greatest leather jackets.",
-  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253147/poe.jpg",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_70/v1526850759/poe.jpg",
   phone_number: "(123) 456-2908", superhost: false })
 
 host7 = User.create!({ password: 123456, email_address: 'cscovluke',
   first_name: 'Luke', planet: 'Tatooine',
   verified: false, bio: "The folksiest farmboy
-  you'll ever meet.", avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253122/luke.jpg",
+  you'll ever meet.", avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_70/v1526850759/luke.jpg",
   phone_number: "(123) 456-5238", superhost: false })
 
 host8 = User.create!({ password: 123456, email_address: 'cscov',
   first_name: 'Leia', planet: 'Alderaan', verified: false,
   bio: "The only princess that matters.",
-  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_128/v1523253137/leia.jpg",
+  avatar: "http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_70/v1526850758/leia.jpg",
   phone_number: "(123) 456-7216", superhost: false })
 
 spot1 = Spot.create!({ host_id: host1.id,
@@ -104,7 +104,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 private_entrance: false,
                 sleeping_arrangements: "1 queen bed and 1 twin bed",
                 house_rules: "Just take off your shoes in the
-                house and clean up after yourself",
+                house and clean up after yourself.",
                 cancellation_policy: "Strict.
                 Cancel up to 7 days before check in and get a 50%
                 refund (minus service fees). Cancel within 7 days
@@ -112,10 +112,10 @@ spot1 = Spot.create!({ host_id: host1.id,
                 Service fees are refunded when cancellation happens
                 before check in and within 48 hours of booking.",
                 getting_around: "We usually ride banthas, but if
-                you get lucky you could rent a podracer",
+                you get lucky you could rent a podracer.",
                 address: "23 Dune Lane, Mos Eisley, Tatooine",
                 directions: "Just head west from the spaceport",
-                house_manual: "No parties. Quiet hours start at 10PM",
+                house_manual: "No parties. Quiet hours start at 10PM.",
                 num_reviews: 101 })
 
             spot2 = Spot.create!({   host_id: host2.id,
@@ -167,12 +167,12 @@ spot1 = Spot.create!({ host_id: host1.id,
                 Service fees are refunded when cancellation happens
                 before check in and within 48 hours of booking.",
                 getting_around: "Ride a Tauntaun! They are also good
-                for warmth",
+                for warmth.",
                 address: "74 Rocky Road, Iceton, Hoth",
                 directions: "It's just around the corner from the
                 landing pad on your left",
                 house_manual: "There are no rules in this cave.
-                This is a fun cave",
+                This is a fun cave.",
                 num_reviews: 52 })
 
               spot3 = Spot.create!({ host_id: host3.id,
@@ -217,7 +217,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 sleeping_arrangements: "1 queen bed and 1 twin bed",
                 house_rules: "Please take off your shoes in the
                 house and clean up after yourself, we work hard
-                to keep the place clean",
+                to keep the place clean.",
                 cancellation_policy: "Strict.
                 Cancel up to 7 days before check in and get a 50%
                 refund (minus service fees). Cancel within 7
@@ -226,7 +226,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 cancellation happens before check in and within
                 48 hours of booking.",
                 getting_around: "We have a small speeder but
-                usually just end up walking",
+                usually just end up walking.",
                 address: "45 Hidden Way, La'Pesh, La'Mu",
                 directions: "Head south from the spaceport and
                 turn left at the fork in the road. Keep going
@@ -286,7 +286,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 Service fees are refunded when cancellation happens
                 before check in and within 48 hours of booking.",
                 getting_around: "Rent a luxury speeder driver for
-                the length of your trip",
+                the length of your trip.",
                 address: "38 Tower Plaza, Cloud City, Bespin",
                 directions: "Turn right at the first cloudbank and
                 left at the second cloudbank.",
@@ -344,12 +344,12 @@ spot1 = Spot.create!({ host_id: host1.id,
                 Service fees are refunded when cancellation happens
                 before check in and within 48 hours of booking.",
                 getting_around: "There are some very fast speeder
-                bikes in the area",
+                bikes in the area.",
                 address: "67 Tree Lane, Yubdub, Endor",
                 directions: "Follow the natural forest paths and
                 you will soon reach the village.",
                 house_manual: "Small parties are allowed. Quiet
-                hours start at 12AM",
+                hours start at 12AM.",
                 num_reviews: 59 })
 
               spot6 = Spot.create!({ host_id: host6.id,
@@ -406,7 +406,7 @@ spot1 = Spot.create!({ host_id: host1.id,
                 rent.",
                 address: "23 Dune Lane, Mos Eisley, Tatooine",
                 directions: "Just head west from the spaceport",
-                house_manual: "No parties. Quiet hours start at 10PM",
+                house_manual: "No parties. Quiet hours start at 10PM.",
                 num_reviews: 67 })
 
               spot7 = Spot.create!({ host_id: host7.id,
@@ -513,14 +513,13 @@ spot1 = Spot.create!({ host_id: host1.id,
                 fees are refunded when cancellation happens before
                 check in and within 48 hours of booking.",
                 getting_around: "We recommend a private gondola ride
-                down the river",
-                house_rules: "Please do not make extra work for the
-                Caretakers and be respectful of the island.",
+                down the river.",
+                house_rules: "Please let the servants know if you
+                need anything.",
                 address: "1 Palace Way, Theed, Naboo",
                 directions: "You don't need directions, as the royal
                 chaffeur will pick you up.",
-                house_manual: "Please let the servants know if you
-                need anything, and remove your shoes while indoors.",
+                house_manual: "We don't have any rules in this palace.",
                 num_reviews: 521 })
 
 tatooine1 = Photo.create!({url: "http://res.cloudinary.com/dvqilcc9p/image/upload/v1523253122/moisture_farm.jpg"})
