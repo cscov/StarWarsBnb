@@ -10,7 +10,7 @@ class Splash extends React.Component {
   render() {
     const {demoLogin} = this.props;
     return (
-      <div>
+      <div id="splash-container">
         <div id="messaging">
           <span className="other-logo theme-pink fa-2x">
             <FontAwesomeIcon icon={["fab", "rebel"]} />

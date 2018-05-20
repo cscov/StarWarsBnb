@@ -5,7 +5,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SessionButtonsContainer from './session/session_button_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
-import Splash from './session/splash';
+import SplashContainer from './session/splash_container';
 import fontawesome from '@fortawesome/fontawesome';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
@@ -21,10 +21,6 @@ import SpotsIndexContainer from './spots/spots_index_container';
 import SpotShowContainer from './spots/spot_show_container';
 import BookingShowContainer from './booking/booking_show_container';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
-import { demoLogin } from '../actions/session_actions';
-import { fetchSpot } from '../actions/spots_actions';
-import configureStore from '../store/store';
-
 
 fontawesome.library.add(brands, regular, solid, faRebel, faEnvelope,
   faUser, faLock, faStar);
@@ -55,7 +51,7 @@ const App = () => (
           <ProtectedRoute path='/trips/:tripId'
                           component={BookingShowContainer} />
           <ProtectedRoute path="/rooms" component={SpotsIndexContainer} />
-          <AuthRoute exact={true} path='/' component={Splash} />
+          <AuthRoute exact={true} path='/' component={SplashContainer} />
         </Switch>
         <address>
           <span id="github" className="theme-light-gray fa-2x">
