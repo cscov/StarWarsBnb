@@ -31,7 +31,7 @@ $standardFontSize: 19px;
 }
 
 nav {
-  margin: 20px 0px 20px 0px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -227,4 +227,37 @@ form {
 
 .form-button {
   width: 100%;
+}
+
+#splash-container {
+  position: relative;
+
+  #messaging {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin: 0 auto;
+    padding: 3em;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    top: 28%;
+    left: 25%;
+
+    #message {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2em;
+      color: $airBnbGray;
+      margin-bottom: 0.5em;
+      text-align: center;
+    }
+
+    #other-demo {
+      font-size: 1em;
+      padding: 1em;
+      width: 90%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
 }

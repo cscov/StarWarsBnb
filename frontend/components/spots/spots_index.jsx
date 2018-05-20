@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter, Route } from 'react-router-dom';
 import SpotsIndexItem from './spots_index_item';
 import SpotShow from './spot_show';
+import LoadingIcon from './loading_icon';
 
 class SpotsIndex extends React.Component {
   constructor(props) {
@@ -13,6 +14,12 @@ class SpotsIndex extends React.Component {
   }
 
   render() {
+    const loading = this.props.loading;
+    if (loading) {
+      return <div className="loading-icon">
+              <LoadingIcon />
+            </div>;
+    }
     const spots = this.props.spots.map( (spot, idx) => {
       return (
               <SpotsIndexItem key={idx} spot={spot}/>
