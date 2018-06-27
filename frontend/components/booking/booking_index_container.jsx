@@ -6,7 +6,7 @@ import TripsButton from './trips_button';
 
 const mapStateToProps = state => ({
   trips: Object.values(state.entities.bookings),
-  modalOpen: state.ui.modal.tripModal,
+  modalOpen: state.ui.modal.tripModalOpen,
   currentUser: state.session.currentUser
 });
 
