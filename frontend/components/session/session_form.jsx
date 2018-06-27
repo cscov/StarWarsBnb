@@ -55,7 +55,8 @@ class SessionForm extends React.Component {
             <div className="form-content">
               <div className="form-top">
                 <Link to="/"><span className="modal-close">&times;</span></Link>
-                <h3>{header}</h3>
+                <h2>{header}</h2>
+                <h3>Get ready to explore the galaxy!</h3>
               </div>
 
               <div className="error-messages">{this.renderErrors()}</div>
@@ -101,7 +102,8 @@ class SessionForm extends React.Component {
             <div className="form-content">
               <div className="form-top">
                 <Link to="/"><span className="modal-close">&times;</span></Link>
-                <h3>{header}</h3>
+                <h2>{header}</h2>
+                <h3>Get ready to explore the galaxy!</h3>
               </div>
 
               <div className="error-messages">{this.renderErrors()}</div>
