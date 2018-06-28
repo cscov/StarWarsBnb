@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 
 const newSession = (currentUser, logout) => (
   <div className="new-session">
+    <img src="http://res.cloudinary.com/dvqilcc9p/image/upload/c_scale,r_30,w_70/v1526850758/leia.jpg" />
     <button onClick={logout}>Log Out</button>
   </div>
 );
