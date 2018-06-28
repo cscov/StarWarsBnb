@@ -23,7 +23,7 @@ class TripsModal extends React.Component {
       );
     } else {
       return (
-        <section onClick={this.handleOpen}>The trip modal is closed</section>
+        <a id="view-trips" href="#" onClick={this.handleOpen}>Trips</a>
       );
     }
   }

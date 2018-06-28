@@ -82,6 +82,13 @@ nav input {
 
 .new-session {
   display: flex;
+  align-items: center;
+
+  #view-trips {
+    color: #787878;
+    vertical-align: middle;
+    font-weight: 300;
+  }
 }
 
 #trips {

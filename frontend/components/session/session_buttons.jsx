@@ -4,8 +4,8 @@ import TripsModalContainer from '../booking/trips_modal_container';
 
 const newSession = (currentUser, logout) => (
   <div className="new-session">
-    <button onClick={logout}>Log Out</button>
     <section><TripsModalContainer /></section>
+    <button onClick={logout}>Log Out</button>
   </div>
 );
 
