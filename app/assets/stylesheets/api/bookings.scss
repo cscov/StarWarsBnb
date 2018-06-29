@@ -1,3 +1,21 @@
 // Place all the styles related to the api::bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$airBnbPink: #FF5A5F;
+$airBnbTeal: #008489;
+$airBnbGray: #484848;
+$airBnbLightGray: rgb(120, 120, 120);
+$airBnbPurple: rgb(87, 37, 51);
+$airBnbBorderColor: #DBDBDB;
+$standardFontSize: 19px;
+
+.trip-modal {
+  height: 8em;
+  background-color: #ffffff;
+  border-color: $airBnbGray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 11%;
+  right: 11%;
+}

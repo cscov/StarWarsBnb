@@ -1,5 +1,4 @@
 import * as APIBookingUtil from '../util/booking_api_util';
-import { openTripsModal } from './modal_actions';
 
 export const RECEIVE_BOOKINGS = 'RECEIVE_BOOKINGS';
 export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
@@ -14,12 +13,11 @@ const receiveBooking = booking => ({
   booking
 });
 
-export const fetchBookings = (id) => dispatch => {
-  dispatch(openTripsModal());
-  return APIBookingUtil.fetchTrips(id).then( bookings => { dispatch(receiveBookings(bookings));
-    return bookings;
-  });
-};
+export const fetchBookings = (id) => dispatch => (
+  APIBookingUtil.fetchTrips(id).then( bookings =>
+    dispatch(receiveBookings(bookings)))
+);
+
 
 export const fetchBooking = (userId, tripId) => dispatch => (
   APIBookingUtil.fetchTrip(userId, tripId).then( booking =>

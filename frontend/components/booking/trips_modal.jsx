@@ -1,4 +1,5 @@
 import React from 'react';
+import BookingIndexContainer from './booking_index_container';
 
 class TripsModal extends React.Component {
   constructor() {
@@ -19,7 +20,10 @@ class TripsModal extends React.Component {
   render() {
     if (this.props.modalOpen) {
       return (
-        <section onClick={this.handleClose}>Here is the trip modal</section>
+        <section className="modal-container" onClick={this.handleClose}>
+          <a id="view-trips" href="#">Trips</a>
+          <BookingIndexContainer />
+        </section>
       );
     } else {
       return (

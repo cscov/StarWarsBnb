@@ -1,5 +1,8 @@
 import React from 'react';
 import BookingIndexItem from './booking_index_item';
+import {faCaretUp} from '@fortawesome/fontawesome-free-solid';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+
 
 class BookingIndex extends React.Component {
   constructor(props) {
@@ -9,16 +12,12 @@ class BookingIndex extends React.Component {
   componentDidMount() {
     if (this.props.currentUser) {
       this.props.fetchBookings(this.props.currentUser.id);
-      ""(this.props);
     }
   }
 
   render() {
-    if (!this.props.show) {
-      return null;
-    }
-    const {trips, onClose} = this.props;
-    trips.map( (trip, idx) => {
+    const {trips} = this.props;
+    const userTrips = trips.map( (trip, idx) => {
       return (
         <BookingIndexItem key={`trip-${idx}`} trip={trip}/>
       );
@@ -27,13 +26,14 @@ class BookingIndex extends React.Component {
       <React.Fragment>
         <div className="trip-modal">
           <div className="top-bar">
+            <span className="fa-2x"><FontAwesomeIcon icon={faCaretUp} /></span>
             <span>Trips</span>
           </div>
           <ul className="trip-list">
-            {trips}
+            {userTrips}
           </ul>
         </div>
-        <div className="background" onClick={this.props.onClose}></div>
+        <div className="background"></div>
       </React.Fragment>
     );
   }

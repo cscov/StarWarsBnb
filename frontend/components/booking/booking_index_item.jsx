@@ -11,7 +11,7 @@ const BookingIndexItem = ({trip}) => {
       </li>
         <li className="num-guests">{trip.numGuests}</li>
       </ul>
-      <img src={trip.spot.spot_first_photo} />
+      <img src={trip.spot_first_photo} />
     </div>
   );
 };
