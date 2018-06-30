@@ -18,6 +18,7 @@ class BookingIndex extends React.Component {
   render() {
     const {trips} = this.props;
     const userTrips = trips.map( (trip, idx) => {
+      console.log(trip);
       return (
         <BookingIndexItem key={`trip-${idx}`} trip={trip}/>
       );
@@ -26,8 +27,8 @@ class BookingIndex extends React.Component {
       <React.Fragment>
         <div className="trip-modal">
           <div className="top-bar">
-            <span className="fa-2x"><FontAwesomeIcon icon={faCaretUp} /></span>
-            <span>Trips</span>
+            <span id="trip-caret" className="fa-2x theme-border-color"><FontAwesomeIcon icon={faCaretUp} /></span>
+            <span className="title">Trips</span>
           </div>
           <ul className="trip-list">
             {userTrips}

@@ -76,6 +76,6 @@ class Booking < ApplicationRecord
   end
 
   def months
-    %w( 0 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
+    %w(0 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
   end
 end

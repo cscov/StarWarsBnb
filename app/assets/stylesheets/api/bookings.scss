@@ -10,12 +10,79 @@ $airBnbPurple: rgb(87, 37, 51);
 $airBnbBorderColor: #DBDBDB;
 $standardFontSize: 19px;
 
+.theme-border-color {
+  color: $airBnbBorderColor;
+}
 .trip-modal {
-  height: 8em;
+  height: auto;
   background-color: #ffffff;
   border-color: $airBnbGray;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 11%;
   right: 11%;
+
+  .top-bar {
+    background-color: $airBnbBorderColor;
+    padding: 5%;
+
+    .title {
+      color: $airBnbGray;
+      font-weight: 500;
+      padding: 1em;
+    }
+  }
+
+  #trip-caret {
+    position: absolute;
+    top: -16%;
+    left: 80%;
+  }
+
+  .trip-info {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+
+    .trip-words {
+      display: flex;
+      flex-direction: column;
+
+      .trip-subheading {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5%;
+
+        .planet {
+          color: $airBnbGray;
+          font-weight: 500;
+        }
+
+        .status {
+          color: $airBnbGray;
+        }
+      }
+
+      .dates, .num-guests {
+        color: $airBnbLightGray;
+        display: inline;
+      }
+
+      .dates {
+        margin-right: 1em;
+      }
+
+      .num-guests {
+        list-style-type: disc;
+      }
+    }
+
+    img {
+      height: 5em;
+      width: 5em;
+      margin-left: 1em;
+    }
+  }
 }
