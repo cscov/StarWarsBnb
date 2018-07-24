@@ -9,6 +9,8 @@ RSpec.describe Booking, type: :model do
     it { should validate_presence_of(:check_out) }
     it { should validate_presence_of(:total_cost) }
     it { should validate_presence_of(:trip_status) }
+    it { should have_db_index(:spot_id) }
+    it { should have_db_index(:traveler_id) }
   end
   context "associations" do
     it { should belong_to(:traveler) }

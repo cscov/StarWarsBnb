@@ -2,6 +2,8 @@ RSpec.describe SpotPhoto, type: :model do
   context "validations" do
     it { should validate_presence_of(:photo_id) }
     it { should validate_presence_of(:spot_id) }
+    it { should have_db_index(:photo_id) }
+    it { should have_db_index(:spot_id) }
   end
 
   context "associations" do
