@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :spot do
+    id 1
     rental_type 'entire house'
     title 'Ice Cave #2'
     planet 'Earth'
