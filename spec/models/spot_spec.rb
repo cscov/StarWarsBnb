@@ -93,9 +93,16 @@ RSpec.describe Spot, type: :model do
     end
 
     describe ".js_parse" do
-      let(:ruby_name) { "amenity_category"}
+      let(:ruby_name) { "amenity_category" }
       it "returns a table attribute in sentence form" do
         expect(Spot.js_parse(ruby_name)).to eq("Amenity category")
+      end
+    end
+
+    describe ".ruby_parse" do
+      let(:ruby_name) { "amenity_category" }
+      it "converts a table attribute from Ruby notation to English notation" do
+        expect(Spot.ruby_parse(ruby_name)).to eq("amenity category")
       end
     end
   end
