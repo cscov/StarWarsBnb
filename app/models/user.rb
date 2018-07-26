@@ -25,7 +25,9 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_many :spots,
-           class_name: :Spot
+           class_name: :Spot,
+           primary_key: :id,
+           foreign_key: :host_id
 
   has_many :trips,
            class_name: :Booking,
