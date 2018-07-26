@@ -64,7 +64,6 @@ RSpec.describe Spot, type: :model do
     end
 
     describe "#.amenities_minus_category" do
-      let(:main_spot) { FactoryBot.build(:spot) }
       it "returns a list of a spot's amenities" do
         expect(Spot.amenities_minus_category).to eq(['wifi', 'indoor fireplace', 'tv',
                                                      'iron', 'essentials', 'heating',
@@ -78,6 +77,18 @@ RSpec.describe Spot, type: :model do
                                                      'smoke detector',
                                                      'first aid kit', 'washer',
                                                      'private entrance'])
+      end
+    end
+
+    describe "#.amenity_categories" do
+      it "returns an array of a spot's amenity categories" do
+        expect(Spot.amenity_categories).to eq(['basic amenity category',
+                                               'facilities amenity category',
+                                               'dining amenity category',
+                                               'guest access amenity category',
+                                               'bed bath amenity category',
+                                               'safety amenity category',
+                                               'not included amenity category'])
       end
     end
   end
