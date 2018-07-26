@@ -116,5 +116,19 @@ RSpec.describe Spot, type: :model do
                                                         'lockbox', 'private entrance'])
       end
     end
+
+    describe "#amenities_included" do
+      let(:main_spot) { FactoryBot.build(:spot) }
+      it "returns an array of all amenities present at a spot" do
+        expect(main_spot.amenities_included).to eq(['Wifi', 'Essentials',
+                                                    'Heating', 'Hot water',
+                                                    'Kitchen', 'Hangers',
+                                                    'Hair dryer', 'Shampoo',
+                                                    'Fire extinguisher',
+                                                    'Carbon monoxide detector',
+                                                    'Smoke detector', 'First aid kit',
+                                                    'Washer'])
+      end
+    end
   end
 end
