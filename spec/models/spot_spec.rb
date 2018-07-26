@@ -43,7 +43,6 @@ RSpec.describe Spot, type: :model do
       it "returns the url of the first photo in a spot's photo association" do
         photos = main_spot.photos
         photos.push(main_spot_photo)
-        # debugger # delete
         expect(main_spot.spot_first_photo).to eq('test_photo.png')
       end
     end
@@ -103,6 +102,18 @@ RSpec.describe Spot, type: :model do
       let(:ruby_name) { "amenity_category" }
       it "converts a table attribute from Ruby notation to English notation" do
         expect(Spot.ruby_parse(ruby_name)).to eq("amenity category")
+      end
+    end
+
+    describe "#amenities_not_included" do
+      let(:main_spot) { FactoryBot.build(:spot) }
+      it "returns an array of the amenities that are not included at a spot" do
+        # debugger # delete
+        expect(main_spot.amenities_not_included).to eq(['indoor fireplace',
+                                                        'tv', 'iron',
+                                                        'air conditioning',
+                                                        'parking', 'hot tub',
+                                                        'lockbox', 'private entrance'])
       end
     end
   end

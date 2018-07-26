@@ -100,15 +100,15 @@ class Spot < ApplicationRecord
 
 
   def self.amenities_minus_category
-     all_categories = self.columns.select{ |c| c.type == :boolean }.map(&:name)
-     all_categories.reject!{ |name| name.include?('category') }
+     all_categories = self.columns.select { |c| c.type == :boolean }.map(&:name)
+     all_categories.reject! { |name| name.include?('category') }
 
      all_categories.map{|name| ruby_parse(name) }
   end
 
   def self.amenity_categories
-    all_categories = self.columns.select{ |c| c.type == :boolean }.map(&:name)
-    all_categories.select!{ |name| name.include?('category') }
+    all_categories = self.columns.select { |c| c.type == :boolean }.map(&:name)
+    all_categories.select! { |name| name.include?('category') }
 
     all_categories.map{|name| ruby_parse(name) }
   end
@@ -122,17 +122,18 @@ class Spot < ApplicationRecord
   end
 
   def amenities_not_included
-    all_amenities = Spot.amenities_minus_category
-    all_amenities.select!{ |amenity| self[amenity] == false }
+    all_amenities = Spot.columns.select{ |c| c.type == :boolean }.map(&:name)
+    all_amenities.reject! { |name| name.include?('category') }
+    all_amenities.select! { |amenity| self[amenity] == false }
 
-    all_amenities.map{|name| Spot.ruby_parse(name) }
+    all_amenities.map { |name| Spot.ruby_parse(name) }
   end
 
   def amenities_included
     all_amenities = Spot.amenities_minus_category
-    all_amenities.select!{ |amenity| self[amenity] == true }
+    all_amenities.select! { |amenity| self[amenity] == true }
 
-    all_amenities.map{|name| Spot.js_parse(name) }
+    all_amenities.map { |name| Spot.js_parse(name) }
   end
 
   def first_six_ament
