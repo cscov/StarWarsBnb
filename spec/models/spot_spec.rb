@@ -63,7 +63,7 @@ RSpec.describe Spot, type: :model do
       end
     end
 
-    describe "#.amenities_minus_category" do
+    describe ".amenities_minus_category" do
       it "returns a list of a spot's amenities" do
         expect(Spot.amenities_minus_category).to eq(['wifi', 'indoor fireplace', 'tv',
                                                      'iron', 'essentials', 'heating',
@@ -80,7 +80,7 @@ RSpec.describe Spot, type: :model do
       end
     end
 
-    describe "#.amenity_categories" do
+    describe ".amenity_categories" do
       it "returns an array of a spot's amenity categories" do
         expect(Spot.amenity_categories).to eq(['basic amenity category',
                                                'facilities amenity category',
@@ -89,6 +89,13 @@ RSpec.describe Spot, type: :model do
                                                'bed bath amenity category',
                                                'safety amenity category',
                                                'not included amenity category'])
+      end
+    end
+
+    describe ".js_parse" do
+      let(:ruby_name) { "amenity_category"}
+      it "returns a table attribute in sentence form" do
+        expect(Spot.js_parse(ruby_name)).to eq("Amenity category")
       end
     end
   end

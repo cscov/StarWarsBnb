@@ -113,10 +113,6 @@ class Spot < ApplicationRecord
     all_categories.map{|name| ruby_parse(name) }
   end
 
-  def self.all_ament_cat
-    self.amenity_categories[0..6]
-  end
-
   def self.js_parse(js_name)
     js_name.split("_").join(" ").capitalize
   end
