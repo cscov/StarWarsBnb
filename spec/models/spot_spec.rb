@@ -130,5 +130,14 @@ RSpec.describe Spot, type: :model do
                                                     'Washer'])
       end
     end
+
+    describe "#first_six_ament" do
+      let(:main_spot) { FactoryBot.build(:spot) }
+      it "returns an array of the first six amenities included in a spot" do
+        expect(main_spot.first_six_ament).to eq(['Wifi', 'Essentials',
+                                                 'Heating', 'Hot water',
+                                                 'Kitchen', 'Hangers'])
+      end
+    end
   end
 end
